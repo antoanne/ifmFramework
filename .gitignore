@@ -3,5 +3,6 @@
 .RData
 .Ruserdata
 
-ifm.Rcheck/*.log
-ifm.Rcheck/*.out
+ifm.Rcheck/*
+
+ifm-package.Rproj
