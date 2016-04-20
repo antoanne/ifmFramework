@@ -1,0 +1,15 @@
+Package: imf
+Type: Package
+Title: Set of functions for financial evaluation of Software Projects
+Version: 1.0
+Date: 2016-04-20
+Author: Eber Schmitz
+Authors@R: c(
+    person("Eber", "Schmitz", email = "eber@nce.ufrj.br", role = "aut"),
+    person("Antoanne", "Pontes", email = "antoanne@ufrj.br", role = "cre"))
+Maintainer: Antoanne Pontes <antoanne@ufrj.br>
+Description: R packeage with a set of functions for financial evaluation of Software Project.
+License: LGPL (>= 2.1)
+URL: https://github.com/antoanne/ifm
+BugReports: https://github.com/antoanne/ifm/issues
+NeedsCompilation: no
