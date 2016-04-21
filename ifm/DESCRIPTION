@@ -1,4 +1,4 @@
-Package: imf
+Package: ifm
 Type: Package
 Title: Set of functions for financial evaluation of Software Projects
 Version: 1.0
