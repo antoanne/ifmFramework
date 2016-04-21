@@ -1,24 +1,24 @@
-\name{imf-package}
-\alias{imf-package}
-\alias{imf}
+\name{ifm-package}
+\alias{ifm-package}
+\alias{ifm}
 \docType{package}
 \title{
-\packageTitle{imf}
+\packageTitle{ifm}
 }
 \description{
-\packageDescription{imf}
+\packageDescription{ifm}
 }
 \details{
 
 The DESCRIPTION file:
-\packageDESCRIPTION{imf}
-\packageIndices{imf}
+\packageDESCRIPTION{ifm}
+\packageIndices{ifm}
 ~~ An overview of how to use the package, including the most important functions ~~
 }
 \author{
-\packageAuthor{imf}
+\packageAuthor{ifm}
 
-Maintainer: \packageMaintainer{imf}
+Maintainer: \packageMaintainer{ifm}
 }
 \references{
 ~~ Literature or other references for background information ~~
