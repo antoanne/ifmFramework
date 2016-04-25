@@ -40,20 +40,17 @@
 #' 
 #' @examples
 #'
-#' fv <- future.value(1000, 1.1425, 12)
-#' print(fv)
+#' fv.1 <- future.value(1000, 1.1425, 12)
+#' print(fv.1)
+#' 
+#' fv.2 <- future_value(1000, 1.1425, 12)
+#' print(fv.2)
+#' 
+#' fv.3 <- futureValue(1000, 1.1425, 12)
+#' print(fv.3)
+#' 
 
 future.value <- future_value <- futureValue <- 
   function(present.value, interest.rate, number.of.periods) {
     return (present.value * (1 + (interest.rate/100)) ^ number.of.periods)
   }
-
-fv.1 <- future.value(1000, 1.1425, 12)
-print(fv.1)
-
-fv.2 <- futureValue(10000, 1.1425, 12)
-print(fv.2)
-
-fv.3 <- future_value(100000, 1.1425, 12)
-print(fv.3)
-

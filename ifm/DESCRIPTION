@@ -8,6 +8,7 @@ Authors@R: c(
     person("Eber", "Schmitz", email = "eber@nce.ufrj.br", role = "aut"),
     person("Antoanne", "Pontes", email = "antoanne@ufrj.br", role = "cre"))
     person("Eduardo", "Chiote", email = "eduardochiote@ufrj.br", role = "cre"))
+    person("Alexandre", "Costa", email = "afcosta@br.ibm.com", role = "cre"))
 Maintainer: Antoanne Pontes <antoanne@ufrj.br>
 Description: R packeage with a set of functions for financial evaluation of
     Software Project.
