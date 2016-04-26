@@ -22,7 +22,8 @@ cfs <- c(-2000,1000,1500,-500,500)
 draw.cfs(cfs,'My Cash Flow')
 }
 \seealso{
-Other financial: \code{\link{future.value}}
+Other financial: \code{\link{future.value}},
+  \code{\link{inflation.free.interest.rate}}
 }
 \keyword{drawcfs}
 

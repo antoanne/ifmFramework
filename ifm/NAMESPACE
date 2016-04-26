@@ -2,3 +2,4 @@
 
 export(draw.cfs)
 export(future.value)
+export(inflation.free.interest.rate)
