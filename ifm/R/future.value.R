@@ -22,12 +22,6 @@
 #' fv.1 <- future.value(1000, 1.1425, 12)
 #' print(fv.1)
 #' 
-#' fv.2 <- future_value(1000, 1.1425, 12)
-#' print(fv.2)
-#' 
-#' fv.3 <- futureValue(1000, 1.1425, 12)
-#' print(fv.3)
-#' 
 
 future.value <- future_value <- futureValue <- 
   function(present.value, interest.rate, number.of.periods) {
