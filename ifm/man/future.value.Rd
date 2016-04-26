@@ -36,5 +36,8 @@ fv.3 <- futureValue(1000, 1.1425, 12)
 print(fv.3)
 
 }
+\seealso{
+Other financial: \code{\link{draw.cfs}}
+}
 \keyword{futureValue}
 

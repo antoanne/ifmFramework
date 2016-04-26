@@ -21,5 +21,8 @@ Draw the graph of cash flow.
 cfs <- c(-2000,1000,1500,-500,500)
 draw.cfs(cfs,'My Cash Flow')
 }
+\seealso{
+Other financial: \code{\link{future.value}}
+}
 \keyword{drawcfs}
 
