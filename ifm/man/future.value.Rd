@@ -33,8 +33,5 @@ print(fv.1)
 \seealso{
 Other financial: \code{\link{draw.cfs}}
 }
-\seealso{
-Other financial: \code{\link{draw.cfs}}
-}
 \keyword{futureValue}
 

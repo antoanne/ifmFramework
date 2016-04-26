@@ -4,5 +4,6 @@
 .Ruserdata
 
 ifm.Rcheck/*
+!ifm.Rcheck/ifm-manual.pdf
 
 *.Rproj
