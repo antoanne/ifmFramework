@@ -14,8 +14,8 @@
 #' 
 #' @examples
 #' 
-#' cfs <- c(-2000,1000,1500,-500,500)
-#' draw.cfs(cfs,'My Cash Flow')
+#' ex.cfs <- c(-2000,1000,1500,-500,500)
+#' draw.cfs(ex.cfs,'My Cash Flow')
 
 draw.cfs <- draw_cfs <- drawCfs <- function(cfs, gt = 'Cash Flow Graphic') {
   plot(cfs, xlab="Period", ylab="Cash")
