@@ -31,7 +31,8 @@ print(fv.1)
 
 }
 \seealso{
-Other financial: \code{\link{draw.cfs}},
+Other financial: \code{\link{discount.rate.vector}},
+  \code{\link{draw.cfs}},
   \code{\link{inflation.free.interest.rate}}
 }
 \keyword{futureValue}

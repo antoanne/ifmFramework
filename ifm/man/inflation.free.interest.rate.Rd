@@ -23,8 +23,8 @@ ex.ifir <- inflation.free.interest.rate(14.25, 12)
 
 }
 \seealso{
-Other financial: \code{\link{draw.cfs}},
-  \code{\link{future.value}}
+Other financial: \code{\link{discount.rate.vector}},
+  \code{\link{draw.cfs}}, \code{\link{future.value}}
 }
 \keyword{inflation-free,}
 \keyword{interest}
