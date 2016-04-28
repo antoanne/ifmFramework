@@ -26,7 +26,8 @@ ex.disc.vector <- discount.rate.vector(6.19, 12)
 \seealso{
 Other financial: \code{\link{draw.cfs}},
   \code{\link{future.value}},
-  \code{\link{inflation.free.interest.rate}}
+  \code{\link{inflation.free.interest.rate}},
+  \code{\link{present.value}}
 }
 \keyword{discount}
 \keyword{interest}
