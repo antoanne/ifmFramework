@@ -30,6 +30,7 @@ ex.disc.vector <- discount.rate.vector(6.19, 12)
 Other financial: \code{\link{draw.cfs}},
   \code{\link{future.value}},
   \code{\link{inflation.free.interest.rate}},
+  \code{\link{net.future.value}},
   \code{\link{net.present.value}},
   \code{\link{present.value}}
 }

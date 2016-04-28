@@ -25,6 +25,7 @@ draw.cfs(ex.cfs,'My Cash Flow')
 Other financial: \code{\link{discount.rate.vector}},
   \code{\link{future.value}},
   \code{\link{inflation.free.interest.rate}},
+  \code{\link{net.future.value}},
   \code{\link{net.present.value}},
   \code{\link{present.value}}
 }

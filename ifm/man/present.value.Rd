@@ -33,6 +33,7 @@ print(ex.pv)
 Other financial: \code{\link{discount.rate.vector}},
   \code{\link{draw.cfs}}, \code{\link{future.value}},
   \code{\link{inflation.free.interest.rate}},
+  \code{\link{net.future.value}},
   \code{\link{net.present.value}}
 }
 \keyword{presentValue}
