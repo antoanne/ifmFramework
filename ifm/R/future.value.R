@@ -20,7 +20,7 @@
 #' @examples
 #'
 #' ex.fv <- future.value(1000, 1.1425, 12)
-#' print(fv.1)
+#' print(ex.fv)
 #' 
 
 future.value <- future_value <- futureValue <- 

@@ -18,13 +18,14 @@ Draw the graph of cash flow.
 }
 \examples{
 
-cfs <- c(-2000,1000,1500,-500,500)
-draw.cfs(cfs,'My Cash Flow')
+ex.cfs <- c(-2000,1000,1500,-500,500)
+draw.cfs(ex.cfs,'My Cash Flow')
 }
 \seealso{
 Other financial: \code{\link{discount.rate.vector}},
   \code{\link{future.value}},
-  \code{\link{inflation.free.interest.rate}}
+  \code{\link{inflation.free.interest.rate}},
+  \code{\link{present.value}}
 }
 \keyword{drawcfs}
 

@@ -26,14 +26,15 @@ or more generally, rate of return.
 }
 \examples{
 
-fv.1 <- future.value(1000, 1.1425, 12)
-print(fv.1)
+ex.fv <- future.value(1000, 1.1425, 12)
+print(ex.fv)
 
 }
 \seealso{
 Other financial: \code{\link{discount.rate.vector}},
   \code{\link{draw.cfs}},
-  \code{\link{inflation.free.interest.rate}}
+  \code{\link{inflation.free.interest.rate}},
+  \code{\link{present.value}}
 }
 \keyword{futureValue}
 
