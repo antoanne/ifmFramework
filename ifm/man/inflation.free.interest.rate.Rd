@@ -10,9 +10,11 @@
 inflation.free.interest.rate(interest.rate = 14.25, inflation.rate = 7.59)
 }
 \arguments{
-\item{interest.rate}{A number that represents the nominal Interest Rate, presented by year.}
+\item{interest.rate}{A number that represents the nominal Interest Rate, 
+presented by year.}
 
-\item{inflation.rate}{A number that represents the Inflation Rate, presented by year.}
+\item{inflation.rate}{A number that represents the Inflation Rate, presented 
+by year.}
 }
 \description{
 Calculate the Inflation-free Interest Rate.
@@ -25,6 +27,7 @@ ex.ifir <- inflation.free.interest.rate(14.25, 12)
 \seealso{
 Other financial: \code{\link{discount.rate.vector}},
   \code{\link{draw.cfs}}, \code{\link{future.value}},
+  \code{\link{net.present.value}},
   \code{\link{present.value}}
 }
 \keyword{inflation-free,}

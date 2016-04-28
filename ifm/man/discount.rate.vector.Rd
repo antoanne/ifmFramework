@@ -9,14 +9,17 @@ discount.rate.vector(interest.rate, number.of.periods,
   begin.of.period = FALSE)
 }
 \arguments{
-\item{interest.rate}{A number that represents the nominal Interest Rate, presented by year.}
+\item{interest.rate}{A number that represents the nominal Interest Rate, 
+presented by year.}
 
 \item{number.of.periods}{Times that interest rate should be applied.}
 
-\item{begin.of.period}{A boolean that represents if the Tax Rate will be applied at the begining of period. FALSE by default.}
+\item{begin.of.period}{A boolean that represents if the Tax Rate will be 
+applied at the begining of period. FALSE by default.}
 }
 \description{
-Generate a vector with discount rate to be applied to each of the time periods.
+Generate a vector with discount rate to be applied to each of 
+the time periods.
 }
 \examples{
 
@@ -27,6 +30,7 @@ ex.disc.vector <- discount.rate.vector(6.19, 12)
 Other financial: \code{\link{draw.cfs}},
   \code{\link{future.value}},
   \code{\link{inflation.free.interest.rate}},
+  \code{\link{net.present.value}},
   \code{\link{present.value}}
 }
 \keyword{discount}

@@ -4,13 +4,16 @@
 #' 
 #' @aliases disc
 #' 
-#' @param interest.rate A number that represents the nominal Interest Rate, presented by year.
+#' @param interest.rate A number that represents the nominal Interest Rate, 
+#' presented by year.
 #' @param number.of.periods Times that interest rate should be applied.
-#' @param begin.of.period A boolean that represents if the Tax Rate will be applied at the begining of period. FALSE by default.
+#' @param begin.of.period A boolean that represents if the Tax Rate will be 
+#' applied at the begining of period. FALSE by default.
 #' 
 #' @export
 #' 
-#' @description Generate a vector with discount rate to be applied to each of the time periods.
+#' @description Generate a vector with discount rate to be applied to each of 
+#' the time periods.
 #' 
 #' @keywords discount rate, interest rate
 #' 

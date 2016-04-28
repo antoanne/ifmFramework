@@ -34,6 +34,7 @@ print(ex.fv)
 Other financial: \code{\link{discount.rate.vector}},
   \code{\link{draw.cfs}},
   \code{\link{inflation.free.interest.rate}},
+  \code{\link{net.present.value}},
   \code{\link{present.value}}
 }
 \keyword{futureValue}

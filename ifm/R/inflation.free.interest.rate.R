@@ -4,8 +4,10 @@
 #' 
 #' @aliases IFIR IfIR ifir
 #' 
-#' @param interest.rate A number that represents the nominal Interest Rate, presented by year.
-#' @param inflation.rate A number that represents the Inflation Rate, presented by year.
+#' @param interest.rate A number that represents the nominal Interest Rate, 
+#' presented by year.
+#' @param inflation.rate A number that represents the Inflation Rate, presented 
+#' by year.
 #' 
 #' @export
 #' 

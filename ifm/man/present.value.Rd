@@ -32,7 +32,8 @@ print(ex.pv)
 \seealso{
 Other financial: \code{\link{discount.rate.vector}},
   \code{\link{draw.cfs}}, \code{\link{future.value}},
-  \code{\link{inflation.free.interest.rate}}
+  \code{\link{inflation.free.interest.rate}},
+  \code{\link{net.present.value}}
 }
 \keyword{presentValue}
 
