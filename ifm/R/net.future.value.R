@@ -2,7 +2,7 @@
 #' 
 #' @name net.future.value
 #' 
-#' @aliases npv
+#' @aliases nfv
 #' 
 #' @param cfs A vector with a series of cash flows.
 #' @param interest.rate A number that represents the nominal Interest Rate, 
