@@ -2,7 +2,7 @@
 % Please edit documentation in R/net.future.value.R
 \name{net.future.value}
 \alias{net.future.value}
-\alias{npv}
+\alias{nfv}
 \title{Vectorize the Future Value}
 \usage{
 net.future.value(cfs, interest.rate, begin.of.period = FALSE)
