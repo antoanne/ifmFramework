@@ -36,7 +36,9 @@ it is assumed by convention, and the cash flow will depend on who receives
 or pays the Capital at a certain time, and:
 
 t = 0 indicates the current day;
+
 Ek is the capital input at a time k;
+
 Sk is the capital output at a time k.
 }
 \examples{

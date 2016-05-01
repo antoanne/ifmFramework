@@ -1,7 +1,4 @@
 #' Calculate the future value of an asset at a specific date.
-#' It measures the nominal future sum of money that a given sum of money is
-#' "worth" at a specified time in the future assuming a certain interest rate, 
-#' or more generally, rate of return.
 #' 
 #' @name future.value
 #' 
@@ -13,6 +10,10 @@
 #' 
 #' @export
 #' 
+#' @description It measures the nominal future sum of money that a given sum of 
+#' money is "worth" at a specified time in the future assuming a certain 
+#' interest rate, or more generally, rate of return.
+#' 
 #' @keywords futureValue
 #' 
 #' @family financial
@@ -20,7 +21,6 @@
 #' @examples
 #'
 #' ex.fv <- future.value(1000, 1.1425, 12)
-#' print(ex.fv)
 #' 
 
 future.value <- future_value <- futureValue <- 

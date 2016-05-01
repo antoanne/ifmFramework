@@ -4,10 +4,7 @@
 \alias{future.value}
 \alias{futureValue}
 \alias{future_value}
-\title{Calculate the future value of an asset at a specific date.
-It measures the nominal future sum of money that a given sum of money is
-"worth" at a specified time in the future assuming a certain interest rate, 
-or more generally, rate of return.}
+\title{Calculate the future value of an asset at a specific date.}
 \usage{
 future.value(present.value, interest.rate, number.of.periods)
 }
@@ -19,15 +16,13 @@ future.value(present.value, interest.rate, number.of.periods)
 \item{number.of.periods}{A number that represent the number of periods.}
 }
 \description{
-Calculate the future value of an asset at a specific date.
-It measures the nominal future sum of money that a given sum of money is
-"worth" at a specified time in the future assuming a certain interest rate, 
-or more generally, rate of return.
+It measures the nominal future sum of money that a given sum of 
+money is "worth" at a specified time in the future assuming a certain 
+interest rate, or more generally, rate of return.
 }
 \examples{
 
 ex.fv <- future.value(1000, 1.1425, 12)
-print(ex.fv)
 
 }
 \seealso{

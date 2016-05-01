@@ -24,7 +24,6 @@
 #' @examples
 #'
 #' ex.pv <- present.value(1000, 1.1425, 12)
-#' print(ex.pv)
 #' 
 
 present.value <-

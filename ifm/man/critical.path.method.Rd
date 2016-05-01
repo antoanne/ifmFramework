@@ -13,6 +13,10 @@ critical.path.method(activities.duration, activities.successors)
 
 \item{activities.successors}{Vector with dependencies between activities.}
 }
+\value{
+The optimized sequence of activities that must be performed to 
+guarantee the shorthest duration.
+}
 \description{
 The Critical Path Method or Critical Path Analysis, is a 
 mathematically based algorithm for scheduling a set of project activities. 
@@ -29,13 +33,7 @@ As input, CPM will receive:
    
    - The time (duration) that each activity will take to completion;
    
-   - The dependencies between the activities. 
-   
-   
-And will return:
-
-   - The optimized sequence of activities that must be performed to guarantee
-   the shorthest duration.
+   - The dependencies between the activities.
 }
 \examples{
 ex.cpm.activities.duration <- c(1,4,5,7,2,3,1)
@@ -43,6 +41,9 @@ ex.cpm.activities.successors <- list(c(2,3), 4, c(4,5), 6, 7, 7, c(0))
 ex.cpm <- critical.path.method(ex.cpm.activities.duration, 
                                ex.cpm.activities.successors)
 
+}
+\seealso{
+Other scheduling: \code{\link{cpm.all.schedule}}
 }
 \keyword{activities}
 \keyword{critical}

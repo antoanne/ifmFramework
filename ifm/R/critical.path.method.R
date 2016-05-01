@@ -27,10 +27,8 @@
 #'    - The dependencies between the activities. 
 #'    
 #'    
-#' And will return:
-#' 
-#'    - The optimized sequence of activities that must be performed to guarantee
-#'    the shorthest duration.
+#' @return The optimized sequence of activities that must be performed to 
+#' guarantee the shorthest duration.
 #' 
 #' @keywords critical path, scheduling, project activities
 #' 

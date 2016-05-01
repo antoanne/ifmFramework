@@ -26,7 +26,6 @@ rates, when the present value will be less than the future value.
 \examples{
 
 ex.pv <- present.value(1000, 1.1425, 12)
-print(ex.pv)
 
 }
 \seealso{

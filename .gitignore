@@ -7,3 +7,5 @@ ifm.Rcheck/*
 !ifm.Rcheck/ifm-manual.pdf
 
 *.Rproj
+
+lixo/*
