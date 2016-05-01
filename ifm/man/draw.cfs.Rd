@@ -4,7 +4,8 @@
 \alias{draw.cfs}
 \alias{drawCfs}
 \alias{draw_cfs}
-\title{Draw the graph of cash flow.}
+\title{Draw the graph of cash flow in order to facilitate the study and the effects
+of the analysis of a certain application.}
 \usage{
 draw.cfs(cfs, gt = "Cash Flow Graphic")
 }
@@ -14,12 +15,35 @@ draw.cfs(cfs, gt = "Cash Flow Graphic")
 \item{gt}{A title for the graph.}
 }
 \description{
-Draw the graph of cash flow.
+Cash flow is a mathematical concept that can be plotted in order to
+facilitate the study and the effects of the analysis of a certain
+application, which may be an investment loan, finance, etc.
+}
+\details{
+Normally a cash flow contains inputs and outputs of capital, marked in
+the timeline starting at t = 0.
+
+A typical example is the graph that represents a bank loan held by a form
+of business she shall return this loan in n equal installments over
+the following months.
+
+And we note that the value is entered in the company's cash (cash was
+positive) and S1, S2, ..., Sn are the values of the parcels will leave
+the company's cash (negative).
+
+The fact that each arrow is pointing upward (positive) or down (negative),
+it is assumed by convention, and the cash flow will depend on who receives
+or pays the Capital at a certain time, and:
+
+t = 0 indicates the current day;
+Ek is the capital input at a time k;
+Sk is the capital output at a time k.
 }
 \examples{
 
 ex.cfs <- c(-2000,1000,1500,-500,500)
 draw.cfs(ex.cfs,'My Cash Flow')
+
 }
 \seealso{
 Other financial: \code{\link{discount.rate.vector}},
