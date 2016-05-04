@@ -26,7 +26,7 @@
 #' 
 #' @examples
 #'
-#' list.of.variables <- excel.xls.to.list("../resources/spreadsheet.xls")
+#' list.of.variables <- excel.xls.to.list("resources/spreadsheet.xls")
 #' 
 
 require("XLConnect")
