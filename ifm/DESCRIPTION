@@ -25,5 +25,4 @@ URL: https://github.com/afcosta-ibm/ifm
 BugReports: https://github.com/afcosta-ibm/ifm/issues
 NeedsCompilation: no
 RoxygenNote: 5.0.1
-#Imports: igraph
-# Depends: XLConnectJars, XLConnect, igraph
+Imports: XLConnect

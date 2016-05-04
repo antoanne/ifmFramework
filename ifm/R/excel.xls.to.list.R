@@ -10,7 +10,7 @@
 #' 
 #' @return List of variables to be used on the maxNPV function.
 #' 
-#' @export
+#' @export excel.xls.to.list
 #' 
 #' @description This function is responsible for reading a spreadsheet 
 #' representing the project, and return a list with the following information
@@ -22,11 +22,11 @@
 #' 
 #' @family utility
 #' 
+#' @import XLConnect
+#' 
 #' @examples
 #'
-#' list.of.variables <- excel.xls.to.list("/home/user/project/spreadsheet.xls")
-#' 
-#' list.of.variables <- excel.xls.to.list("C://user//project//spreadsheet.xls")
+#' list.of.variables <- excel.xls.to.list("../resources/spreadsheet.xls")
 #' 
 
 require("XLConnect")

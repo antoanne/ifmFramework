@@ -22,7 +22,7 @@ matrix that represents the cash flow series
 }
 \examples{
 
-list.of.variables <- excel.xls.to.list("C://temp//spreadsheet.xlsx")
+list.of.variables <- excel.xls.to.list("../resources/spreadsheet.xls")
 
 }
 \keyword{excel}
