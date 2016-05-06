@@ -24,7 +24,8 @@ ex.mmf.seq <- mmf.all.sequences(ex.activities.predecessors)
 }
 \seealso{
 Other scheduling: \code{\link{cpm.all.schedule}},
-  \code{\link{critical.path.method}}
+  \code{\link{critical.path.method}},
+  \code{\link{mmf.max.npv}}
 }
 \keyword{activities}
 \keyword{features,}

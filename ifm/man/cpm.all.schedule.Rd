@@ -40,7 +40,8 @@ ex.cpm.activities.schedule <- cpm.all.schedule(ex.cpm[[1]],
 }
 \seealso{
 Other scheduling: \code{\link{critical.path.method}},
-  \code{\link{mmf.all.sequences}}
+  \code{\link{mmf.all.sequences}},
+  \code{\link{mmf.max.npv}}
 }
 \keyword{activities}
 \keyword{critical}

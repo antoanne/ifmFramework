@@ -2,28 +2,56 @@
 % Please edit documentation in R/mmf.max.npv.R
 \name{mmf.max.npv}
 \alias{mmf.max.npv}
+\alias{mmf_max_npv}
 \title{Calculates NPV for all schedules}
 \usage{
-mmf.max.npv()
+mmf.max.npv(cfs, durations, all.sequences, interest.rate)
+}
+\arguments{
+\item{cfs}{A vector with a series of cash flows.}
+
+\item{durations}{A vector with a list of activities durations.}
+
+\item{all.sequences}{List of all possible MMF sequences.}
+
+\item{interest.rate}{A number that represents the nominal Interest Rate, 
+presented by year.}
+}
+\value{
+One sequence with max NPV and its value
 }
 \description{
-@name mmf.max.npv
- 
- @aliases mmf_max_npv
- 
- @return One sequence with max NPV and its value
- 
- @export mmf.max.npv
- 
- @keywords minimum marketable features, scheduling, project activities
- 
- @family scheduling
- 
- @example
- 
- ex.max.npv <- mmf.max.npv(c(-100, 80, 81, 82, 83, 84, 85, 86), 
-             c(1, 4, 5, 7, 2, 3, 1),
-             c(1,2,3,4,5,6,7),
-             0.024)
+Calculates NPV for all schedules
 }
+\examples{
+ 
+ex.sheet.data <- excel.xls.to.list("../resources/spreadsheet.xls")
+ex.sheet.data.interest.rate <- ex.sheet.data[[1]]
+ex.sheet.data.activities <- ex.sheet.data[[2]]
+ex.sheet.data.durations <- ex.sheet.data[[3]]
+ex.sheet.data.predecessors <- ex.sheet.data[[4]]
+ex.sheet.data.cfs <- ex.sheet.data[[5]]
+ 
+ex.mmf.seq <- mmf.all.sequences(ex.sheet.data.predecessors)
+ 
+ex.mmf.npv <- mmf.max.npv(ex.sheet.data.cfs,
+                          ex.sheet.data.durations,
+                          ex.mmf.seq,
+                          ex.sheet.data.interest.rate)
+ 
+ex.mmf.npv.max <- which.max(ex.mmf.npv)
+
+
+}
+\seealso{
+Other scheduling: \code{\link{cpm.all.schedule}},
+  \code{\link{critical.path.method}},
+  \code{\link{mmf.all.sequences}}
+}
+\keyword{activities}
+\keyword{features,}
+\keyword{marketable}
+\keyword{minimum}
+\keyword{project}
+\keyword{scheduling,}
 
