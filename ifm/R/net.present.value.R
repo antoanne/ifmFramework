@@ -22,7 +22,6 @@
 #' 
 net.present.value <- npv <-
 function(cfs, interest.rate, begin.of.period=FALSE) {
-  interest.rate <- interest.rate*100
   time.instance <- if(begin.of.period) {0:(length(cfs)-1)} else {1:(length(cfs))}
   tax.rate <- (1 / ((1 + (interest.rate/100)) ^ time.instance))
   return (cfs * tax.rate)
