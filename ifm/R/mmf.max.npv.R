@@ -10,7 +10,7 @@
 #' @param interest.rate A number that represents the nominal Interest Rate, 
 #' presented by year.
 #'  
-#' @return One sequence with max NPV and its value
+#' @return A list with all shedules, all npv csf and sum of each npv.
 #'  
 #' @export mmf.max.npv
 #'  
@@ -19,24 +19,44 @@
 #' @family scheduling
 #'  
 #' @examples
-#'  
+#'
+#' # Loading data from XLS
 #' ex.sheet.data <- excel.xls.to.list("../resources/spreadsheet.xls")
 #' ex.sheet.data.interest.rate <- ex.sheet.data[[1]]
 #' ex.sheet.data.activities <- ex.sheet.data[[2]]
 #' ex.sheet.data.durations <- ex.sheet.data[[3]]
 #' ex.sheet.data.predecessors <- ex.sheet.data[[4]]
 #' ex.sheet.data.cfs <- ex.sheet.data[[5]]
-#'  
+#'
+#' # Generating all possible implementation sequences
 #' ex.mmf.seq <- mmf.all.sequences(ex.sheet.data.predecessors)
-#'  
+#'
+#' # Calculating NVP to all possible sequences
 #' ex.mmf.npv <- mmf.max.npv(ex.sheet.data.cfs,
 #'                           ex.sheet.data.durations,
 #'                           ex.mmf.seq,
 #'                           ex.sheet.data.interest.rate)
-#'  
-#' ex.mmf.npv.max <- which.max(ex.mmf.npv)
 #'
+#' # Selecting sequence ID which max NPV
+#' ex.mmf.npv.max <- which.max(ex.mmf.npv[[3]])
 #'
+#' ex.mmf.sched <- ex.mmf.npv[[1]]
+#' ex.mmf.npv <- ex.mmf.npv[[2]] 
+#' ex.mmf.npv.sum <- ex.mmf.npv[[3]]
+#'
+#' # Index of sequence with max NPV
+#' # ex.mmf.npv.max <- which.max(ex.mmf.npv.sum)
+#' 
+#' # Value of max NPV
+#' ex.mmf.npv.max.value <- ex.mmf.npv.sum[[ex.mmf.npv.max]]
+#' 
+#' # Sequence with best NPV
+#' ex.mmf.npv.max.sequence <- ex.mmf.seq[ex.mmf.npv.max]
+#' 
+#' # Schedule of sequence with best NPV
+#' ex.mmf.npv.max.sched <- ex.mmf.sched[ex.mmf.npv.max]
+#'
+
 mmf.max.npv <- mmf_max_npv <- 
   function(cfs, durations, all.sequences, interest.rate) {
   all.shedules <- list()
@@ -51,10 +71,13 @@ mmf.max.npv <- mmf_max_npv <-
   }
   
   all.npv <- list()
+  all.npv.sum <- list()
   
   for (count in 1:length(all.shedules)) {
     last.start <- tail(all.shedules[[count]],1)
+    current.schedule.npv <- list()
     current.schedule.npv.sum <- 0
+    
     for (activity in 1:length(all.sequences[[count]])) {
       current.activity.id <- all.sequences[[count]][[activity]]
       current.activity.start <- all.shedules[[count]][[activity]]
@@ -65,6 +88,9 @@ mmf.max.npv <- mmf_max_npv <-
               current.activity.cfs[1:(length(current.activity.cfs) - (current.activity.start - 1))]))
       #print(c("current.activity.start: ", current.activity.start))
       #print(c("current.activity.cfs: ", current.activity.cfs ))
+      
+      current.schedule.npv[[activity]] <- current.activity.cfs
+      
       current.activity.npv <- net.present.value(current.activity.cfs, interest.rate)
       current.activity.npv.sum <- sum(current.activity.npv)
       
@@ -72,27 +98,54 @@ mmf.max.npv <- mmf_max_npv <-
       #print(c("current.activity.npv.sum: ", current.activity.npv.sum))
       #print("_________")
     }
-    all.npv[count] <- current.schedule.npv.sum
+    all.npv[[count]] <- current.schedule.npv
+    all.npv.sum[count] <- current.schedule.npv.sum
     
   }
-  
-  return(all.npv)
+  return(list(all.shedules, all.npv, all.npv.sum))
 }
 
-# TEST
-#ex.sheet.data <- excel.xls.to.list("resources/spreadsheet.xls")
-#ex.sheet.data.interest.rate <- ex.sheet.data[[1]]
-#ex.sheet.data.activities <- ex.sheet.data[[2]]
-#ex.sheet.data.durations <- ex.sheet.data[[3]]
-#ex.sheet.data.predecessors <- ex.sheet.data[[4]]
-#ex.sheet.data.cfs <- ex.sheet.data[[5]]
-  
-#ex.mmf.seq <- mmf.all.sequences(ex.sheet.data.predecessors)
-
-#ex.mmf.npv <- mmf.max.npv(ex.sheet.data.cfs,
-#                          ex.sheet.data.durations,
-#                          ex.mmf.seq,
-#                          ex.sheet.data.interest.rate)
-
-#ex.mmf.npv.max <- which.max(ex.mmf.npv)
-#ex.mmf.npv.max.sequence <- ex.mmf.seq[ex.mmf.npv.max]
+# # TEST
+# source("ifm/R/excel.xls.to.list.R")
+# source("ifm/R/mmf.all.sequences.R")
+# source("ifm/R/net.present.value.R")
+# source("ifm/R/draw.cfs.R")
+# source("ifm/R/draw.discounted.cash.R")
+# 
+# ex.sheet.data <- excel.xls.to.list("resources/spreadsheet.xls")
+# ex.sheet.data.interest.rate <- ex.sheet.data[[1]]
+# ex.sheet.data.activities <- ex.sheet.data[[2]]
+# ex.sheet.data.durations <- ex.sheet.data[[3]]
+# ex.sheet.data.predecessors <- ex.sheet.data[[4]]
+# ex.sheet.data.cfs <- ex.sheet.data[[5]]
+# 
+# ex.mmf.seq <- mmf.all.sequences(ex.sheet.data.predecessors)
+# 
+# ex.mmf <- mmf.max.npv(ex.sheet.data.cfs,
+#                       ex.sheet.data.durations,
+#                       ex.mmf.seq,
+#                       ex.sheet.data.interest.rate)
+# 
+# ex.mmf.sched <- ex.mmf[[1]]
+# ex.mmf.npv <- ex.mmf[[2]]
+# ex.mmf.npv.sum <- ex.mmf[[3]]
+# 
+# ex.mmf.npv.max <- which.max(ex.mmf.npv.sum)
+# ex.mmf.npv.max.value <- ex.mmf.npv.sum[[ex.mmf.npv.max]]
+# ex.mmf.npv.max.sequence <- ex.mmf.seq[ex.mmf.npv.max]
+# ex.mmf.npv.max.sched <-ex.mmf.sched[ex.mmf.npv.max]
+# 
+# # Matrix with CFS of each activity for better sequence
+# ex.mmf.npv.matrix <- matrix(unlist(ex.mmf.npv[[ex.mmf.npv.max]]),
+#                             ncol = length(ex.mmf.npv[[ex.mmf.npv.max]][[1]]),
+#                             byrow=T)
+# 
+# draw.cfs(colSums(ex.mmf.npv.matrix))
+# 
+# # To plot "Discounted Cash vs Time"
+# ex.mmf.npv.discounted.cash <- cumsum(colSums(ex.mmf.npv.matrix))
+# ex.mmf.npv.discounted.time <- c(0, ex.mmf.npv.max.sched[[1]])
+# 
+# draw.discounted.cash(ex.mmf.npv.discounted.cash)
+# 
+# # TODO: Validate Excel!!!
