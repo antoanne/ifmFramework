@@ -42,8 +42,19 @@ excel.xls.to.list <- excel_xls_to_list <- excelXlsToList <-
                                                    header = FALSE)
     
     # data frame that represents the vector of predecessors
-    data.frame.predecessors <- readNamedRegion(workbook, name = "predecessor", 
+    #data.frame.
+    predecessors.from.xls <- readNamedRegion(workbook, name = "predecessor", 
                                                header = FALSE)
+    data.frame.predecessors <- list()
+    count <- 1
+    for (current.predecessors in predecessors.from.xls[,1]) {
+      current.predecessors.list <- c()
+      for (item in strsplit(current.predecessors, ",")) {
+        current.predecessors.list <- c(current.predecessors.list, strtoi(item))
+      }
+      data.frame.predecessors[[count]] <- current.predecessors.list
+      count <- count + 1
+    }
     
     # data frame that represents the vector of durations
     data.frame.durations <- readNamedRegion(workbook, name = "duration", 
@@ -54,15 +65,15 @@ excel.xls.to.list <- excel_xls_to_list <- excelXlsToList <-
                                              header = FALSE)
     
     # data frame that represents the interest rate
-    data.frame.interest.rate <- readNamedRegion(workbook, 
+    data.frame.interest.rate <- (readNamedRegion(workbook, 
                                                 name = "interestrate",
-                                                header = FALSE)
+                                                header = FALSE) *100)
 
     # list of variables to be used in maxNPV
     variables.list <- list(data.frame.interest.rate[[1]], 
                            data.frame.activities[[1]], 
                            data.frame.durations[[1]],
-                           data.frame.predecessors[[1]], 
+                           data.frame.predecessors, 
                            data.frame.cash.flow.series)
     
     return (variables.list)
