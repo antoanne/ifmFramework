@@ -31,7 +31,9 @@
 #' @aliases draw_cfs drawCfs
 #' @param cfs A vector with a series of cash flows.
 #' @param gt A title for the graph.
-#'
+#' @param to.file Save or not the graph in the file 
+#' @param filename File's name 
+#' 
 #' @export
 #'
 #' @keywords drawcfs
@@ -44,7 +46,10 @@
 #' draw.cfs(ex.cfs,'My Cash Flow')
 #'
 
-draw.cfs <- draw_cfs <- drawCfs <- function(cfs, gt = 'Cash Flow Graphic') {
+draw.cfs <- draw_cfs <- drawCfs <- 
+function(cfs, gt = 'Cash Flow Graphic', to.file=FALSE, 
+         filename="output/draw.cfs.graph.png") {
+  if(to.file) {png(filename)}
   plot(cfs, xlab="Period", ylab="Cash")
   abline(h = c(0))
   title(gt)
@@ -55,4 +60,5 @@ draw.cfs <- draw_cfs <- drawCfs <- function(cfs, gt = 'Cash Flow Graphic') {
       arrows(count, 0, count, i, length=0.1, angle=20)
     }
   }
+  if(to.file) {dev.off()}
 }
