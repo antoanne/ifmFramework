@@ -1,6 +1,7 @@
 library('RUnit')
 
-setwd("~/mestrado/ifm/ifm/R")
+# setwd("~/mestrado/ifm/ifm/R")
+setwd("C:/Users/IBM_ADMIN/nce_mestrado/economiaes/ifm/ifm/R")
 
 source('present.value.R')
 source('future.value.R')
