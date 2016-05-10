@@ -4,16 +4,20 @@
 #' 
 #' @aliases future_value futureValue
 #' 
-#' @param present.value A number that represents the present value of the money.
-#' @param interest.rate A number that represents the interest rate.
-#' @param number.of.periods A number that represent the number of periods.
-#' 
-#' @export
-#' 
 #' @description It measures the nominal future sum of money that a given sum of 
 #' money is "worth" at a specified time in the future assuming a certain 
 #' interest rate, or more generally, rate of return.
+
 #' 
+#' @param present.value A number that represents the present value of the money.
+#' @param interest.rate A number that represents the interest rate.
+#' @param number.of.periods Times that interest rate should be applied.
+#' 
+#' @return future value 
+#' 
+#' @export
+#' 
+' 
 #' @keywords futureValue
 #' 
 #' @family financial

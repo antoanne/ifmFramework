@@ -7,7 +7,7 @@ source('present.value.R')
 source('future.value.R')
 source('net.present.value.R')
 source('net.future.value.R')
-
+source('mmf.all.sequences.R')
 
 test.suite <- defineTestSuite("imf",
                               dirs = file.path("../tests"),

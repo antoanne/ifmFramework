@@ -1,4 +1,7 @@
-#' Scheduling a set of project activities
+#' The critical path method (CPM) is a step-by-step project management technique for process 
+#' planning that defines critical and non-critical tasks with the goal of preventing time-frame
+#' problems and process bottlenecks#' activities are "critical," meaning that they have to be done on time or else 
+#' the whole project will take longer.
 #' 
 #' @name critical.path.method
 #' 
@@ -16,16 +19,6 @@
 #' activities are "critical," meaning that they have to be done on time or else 
 #' the whole project will take longer.
 #' 
-#' CPM calculates: 
-#' 
-#' As input, CPM will receive: 
-#' 
-#'    - A list of all activities required to complete the project;
-#'    
-#'    - The time (duration) that each activity will take to completion;
-#'    
-#'    - The dependencies between the activities. 
-#'    
 #'    
 #' @return The optimized sequence of activities that must be performed to 
 #' guarantee the shorthest duration.

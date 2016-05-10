@@ -9,7 +9,7 @@
 #' 
 #' @export
 #' 
-#' @return Matrix with all mininum makespan cpm start time schedules
+#' @return Matrix with all mininum makespan (the time to complete all jobs) cpm start time schedules
 #' 
 #' @keywords critical path, scheduling, project activities
 #' 
@@ -32,7 +32,7 @@
 #'
 #' ex.cpm.activities.schedule <- cpm.all.schedule(ex.cpm[[1]], 
 #'                                                ex.cpm[[3]] - ex.cpm[[1]])
-#' 
+#' note: ex.cpm[[3]] - ex.cpm[[1]] is the slack time (or 'float') for each task
 cpm.all.schedule <- cpm_all_schedule <- genAllCpmSched <- function(est, slack){
   # Constants
   slack <- slack + 1

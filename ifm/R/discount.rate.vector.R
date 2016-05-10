@@ -8,7 +8,8 @@
 #' presented by year.
 #' @param number.of.periods Times that interest rate should be applied.
 #' @param begin.of.period A boolean that represents if the Tax Rate will be 
-#' applied at the begining of period. FALSE by default.
+#' applied at the begining of period. FALSE by default, represents that Tax Rate will be
+#' applied at second period .
 #' 
 #' @export
 #' 
