@@ -7,6 +7,8 @@
 #' @param est early start time vector
 #' @param slack activities slack
 #' 
+#' @description Generates all possible schedules for a cpm network
+#' 
 #' @export
 #' 
 #' @return Matrix with all mininum makespan (the time to complete all jobs) cpm start time schedules
