@@ -11,7 +11,7 @@
 #' 
 #' @export
 #'
-#' @value Returns the inflation-free interest rate
+#' @return Returns the inflation-free interest rate
 #' 
 #' @keywords inflation-free, interest rate
 #' 
