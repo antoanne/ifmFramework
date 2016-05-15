@@ -20,8 +20,7 @@
 #' the whole project will take longer.
 #' 
 #'    
-#' @return The optimized sequence of activities that must be performed to 
-#' guarantee the shorthest duration.
+#' @return Returns list of EST (Early Start Time), EFT(Early Finish Time),LST(Lately Start Time), LFT (Lately Finish Time) using Forward Pass and Backward Pass 
 #' 
 #' @keywords critical path, scheduling, project activities
 #' 

@@ -8,6 +8,9 @@ source('future.value.R')
 source('net.present.value.R')
 source('net.future.value.R')
 source('mmf.all.sequences.R')
+source('critical.path.method.R')
+source('cpm.all.schedule.R')
+
 
 test.suite <- defineTestSuite("imf",
                               dirs = file.path("../tests"),
@@ -15,5 +18,6 @@ test.suite <- defineTestSuite("imf",
 
 test.result <- runTestSuite(test.suite)
 
-printTextProtocol(test.result)
-
+#'printTextProtocol(test.result)
+printTextProtocol(test.result, showDetails = TRUE)
+printHTMLProtocol(test.result, fileName = "RUnit-unit-test-log.html")

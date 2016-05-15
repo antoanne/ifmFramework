@@ -1,5 +1,9 @@
 test.present.value <- function()
 {
+  
+  vp <- present.value(10000, 5.00, 10)
+  checkIdentical(round(vp, digits = 2), 6139.13)
+  
   vp <- present.value(1000, 0.88, 12)
   checkIdentical(round(vp, digits = 2), 900.20)
   
