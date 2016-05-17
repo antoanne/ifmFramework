@@ -1,6 +1,6 @@
 image.path.vector <- c("output/foo-1.png",
-                       "output/foo-2.png", 
-                       "output/foo-3.png", 
+                       "output/foo-2.png",
+                       "output/foo-3.png",
                        "output/foo-4.jpg",
                        "output/foo-5.jpg")
 
