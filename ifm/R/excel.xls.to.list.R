@@ -47,13 +47,24 @@ excel.xls.to.list <- excel_xls_to_list <- excelXlsToList <-
                                                header = FALSE)
     data.frame.predecessors <- list()
     count <- 1
+    # validate the numbers of 0 (starts) in the predecessors vector
+    number.of.starts <- 0
     for (current.predecessors in predecessors.from.xls[,1]) {
       current.predecessors.list <- c()
       for (item in strsplit(current.predecessors, ",")) {
         current.predecessors.list <- c(current.predecessors.list, strtoi(item))
+        
+        if(strtoi(item) == 0) {
+          number.of.starts <- number.of.starts + 1
+        }
       }
       data.frame.predecessors[[count]] <- current.predecessors.list
       count <- count + 1
+    }
+    
+    if(number.of.starts > 1){
+      print("ERROR IN GRAPH VALIDATION, THERE ARE MORE THEN ONE START")
+      stop("ERROR IN GRAPH VALIDATION, THERE ARE MORE THEN ONE START")
     }
     
     # data frame that represents the vector of durations
