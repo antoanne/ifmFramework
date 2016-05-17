@@ -2,75 +2,11 @@
 % Please edit documentation in R/mmf.max.npv.R
 \name{mmf.max.npv}
 \alias{mmf.max.npv}
-\alias{mmf_max_npv}
-\title{Calculates NPV for all schedules}
+\title{Return Max NPV}
 \usage{
-mmf.max.npv(cfs, durations, all.sequences, interest.rate)
-}
-\arguments{
-\item{cfs}{A vector with a series of cash flows.}
-
-\item{durations}{A vector with a list of activities durations.}
-
-\item{all.sequences}{List of all possible MMF sequences.}
-
-\item{interest.rate}{A number that represents the nominal Interest Rate, 
-presented by year.}
-}
-\value{
-A list with all shedules, all npv csf and sum of each npv.
+mmf.max.npv(mmf.npv.sum, mmf.seq, mmf.sched)
 }
 \description{
-Calculates NPV for all schedules
+Return Max NPV
 }
-\examples{
-
-# Loading data from XLS
-ex.sheet.data <- excel.xls.to.list("../resources/spreadsheet.xls")
-ex.sheet.data.interest.rate <- ex.sheet.data[[1]]
-ex.sheet.data.activities <- ex.sheet.data[[2]]
-ex.sheet.data.durations <- ex.sheet.data[[3]]
-ex.sheet.data.predecessors <- ex.sheet.data[[4]]
-ex.sheet.data.cfs <- ex.sheet.data[[5]]
-
-# Generating all possible implementation sequences
-ex.mmf.seq <- mmf.all.sequences(ex.sheet.data.predecessors)
-
-# Calculating NVP to all possible sequences
-ex.mmf.npv <- mmf.max.npv(ex.sheet.data.cfs,
-                          ex.sheet.data.durations,
-                          ex.mmf.seq,
-                          ex.sheet.data.interest.rate)
-
-# Selecting sequence ID which max NPV
-ex.mmf.npv.max <- which.max(ex.mmf.npv[[3]])
-
-ex.mmf.sched <- ex.mmf.npv[[1]]
-ex.mmf.npv <- ex.mmf.npv[[2]] 
-ex.mmf.npv.sum <- ex.mmf.npv[[3]]
-
-# Index of sequence with max NPV
-# ex.mmf.npv.max <- which.max(ex.mmf.npv.sum)
-
-# Value of max NPV
-ex.mmf.npv.max.value <- ex.mmf.npv.sum[[ex.mmf.npv.max]]
-
-# Sequence with best NPV
-ex.mmf.npv.max.sequence <- ex.mmf.seq[ex.mmf.npv.max]
-
-# Schedule of sequence with best NPV
-ex.mmf.npv.max.sched <- ex.mmf.sched[ex.mmf.npv.max]
-
-}
-\seealso{
-Other scheduling: \code{\link{cpm.all.schedule}},
-  \code{\link{critical.path.method}},
-  \code{\link{mmf.all.sequences}}
-}
-\keyword{activities}
-\keyword{features,}
-\keyword{marketable}
-\keyword{minimum}
-\keyword{project}
-\keyword{scheduling,}
 

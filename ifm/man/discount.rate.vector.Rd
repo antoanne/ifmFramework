@@ -15,7 +15,8 @@ presented by year.}
 \item{number.of.periods}{Times that interest rate should be applied.}
 
 \item{begin.of.period}{A boolean that represents if the Tax Rate will be 
-applied at the begining of period. FALSE by default.}
+applied at the begining of period. FALSE by default, represents that Tax Rate will be
+applied at second period .}
 }
 \description{
 Generate a vector with discount rate to be applied to each of 

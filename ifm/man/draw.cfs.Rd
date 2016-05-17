@@ -7,12 +7,17 @@
 \title{Draw the graph of cash flow in order to facilitate the study and the effects
 of the analysis of a certain application.}
 \usage{
-draw.cfs(cfs, gt = "Cash Flow Graphic")
+draw.cfs(cfs, gt = "Cash Flow Graphic", to.file = FALSE,
+  filename = "output/draw.cfs.graph.png")
 }
 \arguments{
 \item{cfs}{A vector with a series of cash flows.}
 
 \item{gt}{A title for the graph.}
+
+\item{to.file}{Save or not the graph in the file}
+
+\item{filename}{File's name}
 }
 \description{
 Cash flow is a mathematical concept that can be plotted in order to
@@ -24,10 +29,17 @@ Normally a cash flow contains inputs and outputs of capital, marked in
 the timeline starting at t = 0.
 
 A typical example is the graph that represents a bank loan held by a form
-of business she shall return this loan in n equal installments over
+of business that shall return this loan in n equal installments over
 the following months.
+E1 E2 E3 ... En-1 En
+ ^
+ I
+ 0 1 2 3 ... n-1 n
+   I I I
+   V V V 
+ S1 S2 S3 ... Sn-1 Sn
 
-And we note that the value is entered in the company's cash (cash was
+Is possible to note that the value is entered in the company's cash (cash was
 positive) and S1, S2, ..., Sn are the values of the parcels will leave
 the company's cash (negative).
 

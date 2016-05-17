@@ -3,18 +3,20 @@
 \name{mmf.all.sequences}
 \alias{mmf.all.sequences}
 \alias{mmf_all_sequences}
-\title{Generates all MMF sequences (topsorts)}
+\title{Generates the list of all possible MMF sequences (topsorts), constrained by the predecessors}
 \usage{
 mmf.all.sequences(predecessors = 0)
 }
 \arguments{
-\item{predecessors}{List of Predecessors - Zero for none}
+\item{predecessors}{List of Predecessors - Zero for none.  The index of the list of predecessors represents the id of MMF and the value
+in that position the id of MMF's predecessors.  For instance, in list(0,1,2,3,1,5,c(4,6)), we have for MMF 1, predecessor MMF 0; for MMF 2,
+predecessor MMF 7, predecessors 4 and 6}
 }
 \value{
 List of all possible MMF sequences.
 }
 \description{
-Generates all MMF sequences (topsorts)
+Generates the list of all possible MMF sequences (topsorts), constrained by the predecessors
 }
 \examples{
 
@@ -24,8 +26,7 @@ ex.mmf.seq <- mmf.all.sequences(ex.activities.predecessors)
 }
 \seealso{
 Other scheduling: \code{\link{cpm.all.schedule}},
-  \code{\link{critical.path.method}},
-  \code{\link{mmf.max.npv}}
+  \code{\link{critical.path.method}}, \code{\link{mmf.npv}}
 }
 \keyword{activities}
 \keyword{features,}

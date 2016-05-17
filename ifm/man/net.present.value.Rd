@@ -3,7 +3,7 @@
 \name{net.present.value}
 \alias{net.present.value}
 \alias{npv}
-\title{Vectorize the Present Value}
+\title{difference between the present values of cash inflows and outflows}
 \usage{
 net.present.value(cfs, interest.rate, begin.of.period = FALSE)
 }
@@ -14,10 +14,13 @@ net.present.value(cfs, interest.rate, begin.of.period = FALSE)
 presented by year.}
 
 \item{begin.of.period}{A boolean that represents if the Tax Rate will be 
-applied at the begining of period. FALSE by default.}
+applied at the begining of period. FALSE by default, the Tax Rate will be applied to the second period}
+}
+\value{
+The sum of cash flows incomes/outcomes applying the Tax Rate to the present time
 }
 \description{
-Vectorize the Present Value
+calculates the difference between the present values of cash inflows and outflows
 }
 \examples{
 

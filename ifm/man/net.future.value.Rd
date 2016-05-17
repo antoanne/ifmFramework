@@ -3,7 +3,8 @@
 \name{net.future.value}
 \alias{net.future.value}
 \alias{nfv}
-\title{Vectorize the Future Value}
+\title{Net Future Value is a combination of different future values from different 
+times, all which are put into one larger present value.}
 \usage{
 net.future.value(cfs, interest.rate, begin.of.period = FALSE)
 }
@@ -16,8 +17,12 @@ presented by year.}
 \item{begin.of.period}{A boolean that represents if the Tax Rate will be 
 applied at the begining of period. FALSE by default.}
 }
+\value{
+A vector with values updated to future value.
+}
 \description{
-Vectorize the Future Value
+Net Future Value is a combination of different future values 
+from different times, all which are put into one larger present value.
 }
 \examples{
 

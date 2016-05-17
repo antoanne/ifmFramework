@@ -4,7 +4,10 @@
 \alias{cpm}
 \alias{critical.path.method}
 \alias{critical_path_method}
-\title{Scheduling a set of project activities}
+\title{The critical path method (CPM) is a step-by-step project management technique for process 
+planning that defines critical and non-critical tasks with the goal of preventing time-frame
+problems and process bottlenecks#' activities are "critical," meaning that they have to be done on time or else 
+the whole project will take longer.}
 \usage{
 critical.path.method(activities.duration, activities.successors)
 }
@@ -24,16 +27,6 @@ mathematically based algorithm for scheduling a set of project activities.
 CPM will get how long your complex project will take to complete and which 
 activities are "critical," meaning that they have to be done on time or else 
 the whole project will take longer.
-
-CPM calculates: 
-
-As input, CPM will receive: 
-
-   - A list of all activities required to complete the project;
-   
-   - The time (duration) that each activity will take to completion;
-   
-   - The dependencies between the activities.
 }
 \examples{
 ex.cpm.activities.duration <- c(1,4,5,7,2,3,1)
@@ -44,8 +37,7 @@ ex.cpm <- critical.path.method(ex.cpm.activities.duration,
 }
 \seealso{
 Other scheduling: \code{\link{cpm.all.schedule}},
-  \code{\link{mmf.all.sequences}},
-  \code{\link{mmf.max.npv}}
+  \code{\link{mmf.all.sequences}}, \code{\link{mmf.npv}}
 }
 \keyword{activities}
 \keyword{critical}

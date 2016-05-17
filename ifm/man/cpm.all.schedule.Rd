@@ -14,7 +14,7 @@ cpm.all.schedule(est, slack)
 \item{slack}{activities slack}
 }
 \value{
-Matrix with all mininum makespan cpm start time schedules
+Matrix with all mininum makespan (the time to complete all jobs) cpm start time schedules
 }
 \description{
 Generates all possible schedules for a cpm network
@@ -36,12 +36,13 @@ ex.cpm <- critical.path.method(ex.cpm.activities.duration,
 
 ex.cpm.activities.schedule <- cpm.all.schedule(ex.cpm[[1]], 
                                                ex.cpm[[3]] - ex.cpm[[1]])
+                                               
+# note: ex.cpm[[3]] - ex.cpm[[1]] is the slack time (or 'float') for each task
 
 }
 \seealso{
 Other scheduling: \code{\link{critical.path.method}},
-  \code{\link{mmf.all.sequences}},
-  \code{\link{mmf.max.npv}}
+  \code{\link{mmf.all.sequences}}, \code{\link{mmf.npv}}
 }
 \keyword{activities}
 \keyword{critical}

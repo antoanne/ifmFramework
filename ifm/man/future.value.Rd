@@ -13,7 +13,10 @@ future.value(present.value, interest.rate, number.of.periods)
 
 \item{interest.rate}{A number that represents the interest rate.}
 
-\item{number.of.periods}{A number that represent the number of periods.}
+\item{number.of.periods}{Times that interest rate should be applied.}
+}
+\value{
+future value
 }
 \description{
 It measures the nominal future sum of money that a given sum of 

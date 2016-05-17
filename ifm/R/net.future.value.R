@@ -1,11 +1,12 @@
-#' Net Future Value is a combination of different future values from different times, all which are put into one larger present value.
+#' Net Future Value is a combination of different future values from different 
+#' times, all which are put into one larger present value.
 #' 
 #' @name net.future.value
 #' 
 #' @aliases nfv
 #' 
-#' @description  Net Future Value is a combination of different future values from different times, all which are put into one larger present value.
-#' 
+#' @description  Net Future Value is a combination of different future values 
+#' from different times, all which are put into one larger present value.
 #' 
 #' @param cfs A vector with a series of cash flows.
 #' @param interest.rate A number that represents the nominal Interest Rate, 
@@ -13,7 +14,7 @@
 #' @param begin.of.period A boolean that represents if the Tax Rate will be 
 #' applied at the begining of period. FALSE by default.
 #' 
-#' @
+#' @return A vector with values updated to future value.
 #' 
 #' @export
 #' 

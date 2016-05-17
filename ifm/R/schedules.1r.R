@@ -2,6 +2,7 @@
 #' @name schedules.1r
 #' @param sequences All sequences
 #' @param durations Duration of activities
+#' @export
 schedules.1r <- function(sequences, durations) {
   schedules <- list()
   for (seq in sequences) {

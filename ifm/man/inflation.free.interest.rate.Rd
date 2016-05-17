@@ -16,6 +16,9 @@ presented by year.}
 \item{inflation.rate}{A number that represents the Inflation Rate, presented 
 by year.}
 }
+\value{
+Returns the inflation-free interest rate
+}
 \description{
 Calculate the Inflation-free Interest Rate.
 }
