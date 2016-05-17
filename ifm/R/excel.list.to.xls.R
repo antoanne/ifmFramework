@@ -23,7 +23,6 @@
 #'  \item The image oh the "Breaking Event (time) x Schedulling ID" chart;
 #' }
 #' 
-#' 
 #' @keywords excel maxNPV list.to.xls
 #' 
 #' @family utility
@@ -43,12 +42,10 @@ excel.list.to.xls <- excel_list_to_xls <- excelListToXls<-
     # generate a formatted date-time to append on the file path
     date.time <- format(Sys.time(), "%Y-%m-%d-%H-%M-%S")
     
-    # ACERTAR PARA EXPORTAR PARA O /OUTPUT
-    # TODO afil
     # define a file path to save the spreadsheet
-    file.path <- paste("c:\\afilcosta\\git\\ifm\\resources\\ifm-result-", 
-                       date.time, ".xls", 
-                       sep = "")
+    file.path <- paste("output/ifm-result-", date.time, ".xls", sep = "")
+    
+    print(file.path)
     
     # get the data frame of the list
     data.frame <- list.ifm.result[[1]]
