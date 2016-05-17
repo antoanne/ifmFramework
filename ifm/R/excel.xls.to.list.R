@@ -53,8 +53,7 @@ excel.xls.to.list <- excel_xls_to_list <- excelXlsToList <-
       current.predecessors.list <- c()
       for (item in strsplit(current.predecessors, ",")) {
         current.predecessors.list <- c(current.predecessors.list, strtoi(item))
-        
-        if(strtoi(item) == 0) {
+        if(is.element(0,strtoi(item)) == TRUE) {
           number.of.starts <- number.of.starts + 1
         }
       }
