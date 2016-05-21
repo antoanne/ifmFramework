@@ -19,9 +19,10 @@
 #' 
 #' @examples
 #'
-#' ex.ifir <- inflation.free.interest.rate(14.25, 12)
+#' ex.ifir <- inflation.free.interest.rate(0.1425, 0.0759)
 #' 
 inflation.free.interest.rate <- IFIR <- IfIR <- ifir <-
-function(interest.rate = 14.25, inflation.rate = 7.59) {
-  return (100*((1+interest.rate/100)/(1+inflation.rate/100) - 1))
-}
+  function(interest.rate = 0.1425, inflation.rate = 0.0759) {
+    return (((1+interest.rate)/(1+inflation.rate) - 1))
+  }
+
