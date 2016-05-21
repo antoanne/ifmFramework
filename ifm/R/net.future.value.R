@@ -14,7 +14,7 @@
 #' @param begin.of.period A boolean that represents if the Tax Rate will be 
 #' applied at the begining of period. FALSE by default.
 #' 
-#' @return A vector with values updated to future value.
+#' @return A future value of a cash flow series.
 #' 
 #' @export
 #' 
@@ -27,8 +27,11 @@
 #' ex.nfv <- net.future.value(c(-350,100,200,150,75), 0.0619, TRUE)
 #' 
 net.future.value <-
-function(cfs, interest.rate, begin.of.period=FALSE) {
-  time.instance <- if(begin.of.period) {0:(length(cfs)-1)} else {1:(length(cfs))}
-  tax.rate <- ((1 + (interest.rate)) ^ time.instance)
-  return (cfs * tax.rate)
-}
+function(cfs = c(-350,100,200,150,75), 
+         interest.rate = 0.0619, 
+         begin.of.period = TRUE) 
+  {
+    time.instance <- if(begin.of.period) {0:(length(cfs)-1)} else {1:(length(cfs))}
+    tax.rate <- ((1 + (interest.rate)) ^ time.instance)
+    return (sum(cfs * tax.rate))
+  }
