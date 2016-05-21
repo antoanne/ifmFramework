@@ -13,12 +13,12 @@
 #' @family financial
 #' @examples
 #'
-#' ex.disc.csf <- discounted.csf(c(-350,100,200,150,75), 0.0619, TRUE)
+#' ex.disc.csf <- discounted.csf(c(-350,100,200,150,75), 0.0619, FALSE)
 #' 
 discounted.csf <- discounted_csf <- discountedCsf <- 
   function(cfs = c(-350,100,200,150,75), 
            interest.rate = 0.0619, 
-           begin.of.period = TRUE) 
+           begin.of.period = FALSE) 
   {
     time.instance <- if(begin.of.period) {0:(length(cfs)-1)} else {1:(length(cfs))}
     tax.rate <- (1 / ((1 + (interest.rate)) ^ time.instance))
