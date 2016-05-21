@@ -77,7 +77,7 @@ excel.xls.to.list <- excel_xls_to_list <- excelXlsToList <-
     # data frame that represents the interest rate
     data.frame.interest.rate <- (readNamedRegion(workbook, 
                                                 name = "interestrate",
-                                                header = FALSE) *100)
+                                                header = FALSE))
 
     # list of variables to be used in maxNPV
     variables.list <- list(data.frame.interest.rate[[1]], 
