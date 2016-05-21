@@ -3,9 +3,10 @@
 \name{net.present.value}
 \alias{net.present.value}
 \alias{npv}
-\title{difference between the present values of cash inflows and outflows}
+\title{Difference between the present values of cash inflows and outflows}
 \usage{
-net.present.value(cfs, interest.rate, begin.of.period = FALSE)
+net.present.value(cfs = c(-350, 100, 200, 150, 75), interest.rate = 0.0619,
+  begin.of.period = TRUE)
 }
 \arguments{
 \item{cfs}{A vector with a series of cash flows.}
@@ -14,25 +15,26 @@ net.present.value(cfs, interest.rate, begin.of.period = FALSE)
 presented by year.}
 
 \item{begin.of.period}{A boolean that represents if the Tax Rate will be 
-applied at the begining of period. FALSE by default, the Tax Rate will be applied to the second period}
+applied at the begining of period. FALSE by default, the Tax Rate will be 
+applied to the second period.}
 }
 \value{
-The sum of cash flows incomes/outcomes applying the Tax Rate to the present time
+The sum of cash flows incomes/outcomes applying the Tax Rate to the 
+present time
 }
 \description{
-calculates the difference between the present values of cash inflows and outflows
+calculates the difference between the present values of cash 
+inflows and outflows.
 }
 \examples{
 
-ex.npv <- net.present.value(c(-350,100,200,150,75), 6.19, TRUE)
+ex.npv <- net.present.value(c(-350,100,200,150,75), 0.0619, TRUE)
 
 }
 \seealso{
 Other financial: \code{\link{discount.rate.vector}},
-  \code{\link{draw.cfs}}, \code{\link{future.value}},
-  \code{\link{inflation.free.interest.rate}},
-  \code{\link{net.future.value}},
-  \code{\link{present.value}}
+  \code{\link{discounted.csf}}, \code{\link{draw.cfs}},
+  \code{\link{ifir}}, \code{\link{net.future.value}}
 }
 \keyword{presentValue}
 

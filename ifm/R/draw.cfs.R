@@ -1,7 +1,7 @@
 #' Draw the graph of cash flow 
 #'
 #' @name draw.cfs
-#'
+#' 
 #' @aliases draw_cfs drawCfs
 #' @param cfs A vector with a series of cash flows.
 #' @param gt A title for the graph.
@@ -17,7 +17,7 @@
 #'
 #' @description A typical example is the graph that represents a bank loan held by a form
 #' @description of business that shall return this loan in n equal installments over
-#' @descriptiont the following months.
+#' @description the following months.
 #' @description E1 E2 E3 ... En-1 En
 #' @description  ^
 #' @description  I
@@ -40,8 +40,8 @@
 #' 
 #' @description Sk is the capital output at a time k.
 #' @export
-#' @return 
-#' @keywords drawcfs
+#' @return A plot with cash flow series
+#' @keywords draw, cash flow series
 #'
 #' @family financial
 #'

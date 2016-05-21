@@ -25,6 +25,9 @@ matrix that represents the cash flow series
 ex.sheet.data <- excel.xls.to.list("../resources/spreadsheet.xls")
 
 }
+\seealso{
+Other utility: \code{\link{excel.list.to.xls}}
+}
 \keyword{excel}
 \keyword{maxNPV}
 \keyword{xls.to.list}

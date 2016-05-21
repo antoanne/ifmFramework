@@ -4,8 +4,7 @@
 \alias{draw.cfs}
 \alias{drawCfs}
 \alias{draw_cfs}
-\title{Draw the graph of cash flow in order to facilitate the study and the effects
-of the analysis of a certain application.}
+\title{Draw the graph of cash flow}
 \usage{
 draw.cfs(cfs, gt = "Cash Flow Graphic", to.file = FALSE,
   filename = "output/draw.cfs.graph.png")
@@ -19,32 +18,50 @@ draw.cfs(cfs, gt = "Cash Flow Graphic", to.file = FALSE,
 
 \item{filename}{File's name}
 }
-\description{
-Cash flow is a mathematical concept that can be plotted in order to
-facilitate the study and the effects of the analysis of a certain
-application, which may be an investment loan, finance, etc.
+\value{
+A plot with cash flow series
 }
-\details{
+\description{
+Draw the graph of cash flow in order to facilitate the study and the effects of the analysis of a certain application.
+
+Cash flow is a mathematical concept that can be plotted in order to facilitate the study and the effects of the analysis of a certain
+
+application, which may be an investment loan, finance, etc.
+
 Normally a cash flow contains inputs and outputs of capital, marked in
+
 the timeline starting at t = 0.
 
 A typical example is the graph that represents a bank loan held by a form
+
 of business that shall return this loan in n equal installments over
+
 the following months.
+
 E1 E2 E3 ... En-1 En
- ^
- I
- 0 1 2 3 ... n-1 n
-   I I I
-   V V V 
- S1 S2 S3 ... Sn-1 Sn
+
+^
+
+I
+
+0 1 2 3 ... n-1 n
+
+I I I
+
+V V V
+
+S1 S2 S3 ... Sn-1 Sn
 
 Is possible to note that the value is entered in the company's cash (cash was
+
 positive) and S1, S2, ..., Sn are the values of the parcels will leave
+
 the company's cash (negative).
 
 The fact that each arrow is pointing upward (positive) or down (negative),
+
 it is assumed by convention, and the cash flow will depend on who receives
+
 or pays the Capital at a certain time, and:
 
 t = 0 indicates the current day;
@@ -61,11 +78,12 @@ draw.cfs(ex.cfs,'My Cash Flow')
 }
 \seealso{
 Other financial: \code{\link{discount.rate.vector}},
-  \code{\link{future.value}},
-  \code{\link{inflation.free.interest.rate}},
+  \code{\link{discounted.csf}}, \code{\link{ifir}},
   \code{\link{net.future.value}},
-  \code{\link{net.present.value}},
-  \code{\link{present.value}}
+  \code{\link{net.present.value}}
 }
-\keyword{drawcfs}
+\keyword{cash}
+\keyword{draw,}
+\keyword{flow}
+\keyword{series}
 

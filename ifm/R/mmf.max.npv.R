@@ -1,13 +1,12 @@
 #' Return Max NPV
 #' @name mmf.max.npv
-#' @aliases 
 #' @param mmf.npv Vector of Net Present Value
 #' @param mmf.seq Vector with the sequence of activities
 #' @param mmf.sched Vector with the collection of possible schedules
 #' @description this function identifies the sequence of activities and respectivies schedules where with the optimized NPV 
 #' @return list with NPV, sequence and scheduleof the sequence with the maximum NPV 
-#' @keywords
-#' @family
+#' @keywords npv
+#' @family schedule
 #' @export
 #' @examples 
 #' 

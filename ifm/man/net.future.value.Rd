@@ -6,7 +6,8 @@
 \title{Net Future Value is a combination of different future values from different 
 times, all which are put into one larger present value.}
 \usage{
-net.future.value(cfs, interest.rate, begin.of.period = FALSE)
+net.future.value(cfs = c(-350, 100, 200, 150, 75), interest.rate = 0.0619,
+  begin.of.period = TRUE)
 }
 \arguments{
 \item{cfs}{A vector with a series of cash flows.}
@@ -18,7 +19,7 @@ presented by year.}
 applied at the begining of period. FALSE by default.}
 }
 \value{
-A vector with values updated to future value.
+A future value of a cash flow series.
 }
 \description{
 Net Future Value is a combination of different future values 
@@ -26,15 +27,13 @@ from different times, all which are put into one larger present value.
 }
 \examples{
 
-ex.nfv <- net.future.value(c(-350,100,200,150,75), 6.19, TRUE)
+ex.nfv <- net.future.value(c(-350,100,200,150,75), 0.0619, TRUE)
 
 }
 \seealso{
 Other financial: \code{\link{discount.rate.vector}},
-  \code{\link{draw.cfs}}, \code{\link{future.value}},
-  \code{\link{inflation.free.interest.rate}},
-  \code{\link{net.present.value}},
-  \code{\link{present.value}}
+  \code{\link{discounted.csf}}, \code{\link{draw.cfs}},
+  \code{\link{ifir}}, \code{\link{net.present.value}}
 }
 \keyword{futureValue}
 

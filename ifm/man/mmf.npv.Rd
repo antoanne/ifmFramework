@@ -5,7 +5,7 @@
 \alias{mmf_npv}
 \title{Calculates NPV for all schedules}
 \usage{
-mmf.npv(cfs, durations, all.sequences, interest.rate)
+mmf.npv(cfs, durations, all.sequences, interest.rate, begin.of.period = FALSE)
 }
 \arguments{
 \item{cfs}{A vector with a series of cash flows.}
@@ -64,8 +64,9 @@ ex.mmf.npv.max.sched <- ex.mmf.sched[ex.mmf.npv.max]
 }
 \seealso{
 Other scheduling: \code{\link{cpm.all.schedule}},
-  \code{\link{critical.path.method}},
-  \code{\link{mmf.all.sequences}}
+  \code{\link{cpm}}, \code{\link{mmf.all.sequences}},
+  \code{\link{mmf.get.breakeven}},
+  \code{\link{mmf.get.selffunding}}
 }
 \keyword{activities}
 \keyword{features,}

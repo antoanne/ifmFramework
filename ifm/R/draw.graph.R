@@ -26,7 +26,7 @@
 #' ex.graph.image.path <- draw.graph(c(1,2, 1,3, 2,3, 3,4))
 #' 
 
-require("igraph")
+# require("igraph")
 
 draw.graph <- draw_graph <- drawGraph <-
   # initialize a vector if null

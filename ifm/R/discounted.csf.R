@@ -1,3 +1,4 @@
+#' The cash flows incomes/outcomes applying the Tax Rate to the present time.
 #' @name discounted.csf
 #' @aliases discounted_csf discountedCsf
 #' @param cfs A vector with a series of cash flows.
