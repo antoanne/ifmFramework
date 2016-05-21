@@ -1,12 +1,15 @@
-#' Generates the list of all possible MMF sequences (topsorts), constrained by the predecessors
+#' Generates the topsorts list
 #' 
 #' @name mmf.all.sequences
 #' 
 #' @aliases mmf_all_sequences
 #' 
+' 
 #' @param predecessors List of Predecessors - Zero for none.  The index of the list of predecessors represents the id of MMF and the value
-#'  in that position the id of MMF's predecessors.  For instance, in list(0,1,2,3,1,5,c(4,6)), we have for MMF 1, predecessor MMF 0; for MMF 2,
-#'  predecessor MMF 7, predecessors 4 and 6
+#' @param  in that position the id of MMF's predecessors.  For instance, in list(0,1,2,3,1,5,c(4,6)), we have for MMF 1, predecessor MMF 0; for MMF 2,
+#' @param predecessor MMF 7, predecessors 4 and 6
+#'
+#' @description Generates the list of all possible MMF sequences (topsorts), constrained by the predecessors
 #' 
 #' @return List of all possible MMF sequences.
 #' 

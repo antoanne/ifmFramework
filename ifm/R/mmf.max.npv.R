@@ -1,8 +1,13 @@
 #' Return Max NPV
 #' @name mmf.max.npv
-#' @param mmf.npv.sum
-#' @param mmf.seq
-#' @param mmf.sched
+#' @aliases 
+#' @param mmf.npv.sum Vector of Net Present Value
+#' @param mmf.seq Vector with the sequence of activities
+#' @param mmf.sched Vector with the collection of possible schedules
+#' @description this function identifies the sequence of activities and respectivies schedules where with the optimized NPV 
+#' @return list with NPV, sequence and scheduleof the sequence with the maximum NPV 
+#' @keywords
+#' @family
 #' @export
 mmf.max.npv <- function(mmf.npv.sum, mmf.seq, mmf.sched) {
   npv.max <- which.max(mmf.npv.sum) # Identify position of MAX NPV

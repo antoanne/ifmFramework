@@ -1,6 +1,6 @@
 test.future.value_BegPeriodTrue <- function()
 {
-  nfv <- net.future.value(c(-3000,1000,1000,1000,1000,1000), 5.0, FALSE)
+  nfv <- net.future.value(c(-3000,1000,1000,1000,1000,1000), 0.05, FALSE)
   checkIdentical(round(nfv[[1]], digits = 2), -3000.00)
   checkIdentical(round(nfv[[2]], digits = 2), 1050.00)
   checkIdentical(round(nfv[[3]], digits = 2), 1102.50)
@@ -10,7 +10,7 @@ test.future.value_BegPeriodTrue <- function()
 }
 test.future.value_BegPeriodFalse <- function()
 {  
-  nfv <- net.future.value(c(-3000,1000,1000,1000,1000,1000), 5.0, TRUE)
+  nfv <- net.future.value(c(-3000,1000,1000,1000,1000,1000), 0.05, TRUE)
   checkIdentical(round(nfv[[1]], digits = 2), -3150.00)
   checkIdentical(round(nfv[[2]], digits = 2), 1102.50)
   checkIdentical(round(nfv[[3]], digits = 2), 1157.63)

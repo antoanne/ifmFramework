@@ -24,11 +24,11 @@
 #' 
 #' @examples
 #'
-#' ex.nfv <- net.future.value(c(-350,100,200,150,75), 6.19, TRUE)
+#' ex.nfv <- net.future.value(c(-350,100,200,150,75), 0.0619, TRUE)
 #' 
 net.future.value <-
 function(cfs, interest.rate, begin.of.period=FALSE) {
   time.instance <- if(begin.of.period) {0:(length(cfs)-1)} else {1:(length(cfs))}
-  tax.rate <- ((1 + (interest.rate/100)) ^ time.instance)
+  tax.rate <- ((1 + (interest.rate)) ^ time.instance)
   return (cfs * tax.rate)
 }

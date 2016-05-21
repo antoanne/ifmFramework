@@ -11,10 +11,10 @@
 #' applied at the begining of period. FALSE by default, represents that Tax Rate will be
 #' applied at second period .
 #' 
-#' @export
-#' 
 #' @description Generate a vector with discount rate to be applied to each of 
 #' the time periods.
+#' @return vector with discount rates
+#' @export
 #' 
 #' @keywords discount rate, interest rate
 #' 
@@ -22,7 +22,7 @@
 #' 
 #' @examples
 #'
-#' ex.disc.vector <- discount.rate.vector(6.19, 12)
+#' ex.disc.vector <- discount.rate.vector(0.0619, 12)
 #' 
 discount.rate.vector <- disc <-
 function(interest.rate, number.of.periods, begin.of.period=FALSE) {

@@ -10,16 +10,13 @@
 #' @param activities.duration Vector with activities duration.
 #' @param activities.successors Vector with dependencies between activities.
 #' 
-#' @export
-#' 
 #' @description The Critical Path Method or Critical Path Analysis, is a 
 #' mathematically based algorithm for scheduling a set of project activities. 
 #' 
 #' CPM will get how long your complex project will take to complete and which 
 #' activities are "critical," meaning that they have to be done on time or else 
 #' the whole project will take longer.
-#' 
-#'    
+#' @export
 #' @return Returns list of EST (Early Start Time), EFT(Early Finish Time),LST(Lately Start Time), LFT (Lately Finish Time) using Forward Pass and Backward Pass 
 #' 
 #' @keywords critical path, scheduling, project activities
