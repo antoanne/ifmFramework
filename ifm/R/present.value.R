@@ -23,10 +23,10 @@
 #' 
 #' @examples
 #'
-#' ex.pv <- present.value(1000, 1.1425, 12)
+#' ex.pv <- present.value(1000, 0.01425, 12)
 #' 
 
-present.value <-
-function(future.value, interest.rate, number.of.periods) {
-  return (future.value / (1 + (interest.rate/100)) ^ number.of.periods )
-}
+present.value <- present_value <- presentValue <-
+  function(future.value, interest.rate, number.of.periods) {
+    return (future.value / (1 + (interest.rate)) ^ number.of.periods )
+  }
