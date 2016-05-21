@@ -23,21 +23,22 @@
 #' 
 #' ex.cpm.activities.duration <- c(1,4,5,7,2,3,1)
 #' ex.cpm.activities.successors <- list(c(2,3), 4, c(4,5), 6, 7, 7, c(0))
-#' ex.cpm <- critical.path.method(ex.cpm.activities.duration, 
-#'                                ex.cpm.activities.successors)
+#' ex.cpm <- cpm(ex.cpm.activities.duration, 
+#'               ex.cpm.activities.successors)
 #'
 #' Now, that we have the CPM vector with:
-#' - est (Early Start Time) - ex.cpm[[1]]
+#' - est (Early Start Time)  - ex.cpm[[1]]
 #' - eft (Early Finish Time) - ex.cpm[[2]]
-#' - lst (Late Start Time) - ex.cpm[[3]]
-#' - lft (Late Finish Time) ex.cpm[[4]]
+#' - lst (Late Start Time)   - ex.cpm[[3]]
+#' - lft (Late Finish Time)  - ex.cpm[[4]]
 #'
-#' ex.cpm.activities.schedule <- cpm.all.schedule(ex.cpm[[1]], 
-#'                                                ex.cpm[[3]] - ex.cpm[[1]])
+#' ex.cpm.activities.schedule <- 
+#'    cpm.all.schedule(ex.cpm[['est']], ex.cpm[['lst']] - ex.cpm[['est']])
 #'                                                
-#' # note: ex.cpm[[3]] - ex.cpm[[1]] is the slack time (or 'float') for each task
+#' # note: ex.cpm['lst'] - ex.cpm['est'] is the slack time (or 'float') for each task
 #' 
-cpm.all.schedule <- cpm_all_schedule <- genAllCpmSched <- function(est, slack){
+cpm.all.schedule <- cpm_all_schedule <- genAllCpmSched <- 
+  function(est, slack){
   # Constants
   slack <- slack + 1
   m <- prod(slack)
