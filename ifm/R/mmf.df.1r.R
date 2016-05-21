@@ -42,14 +42,14 @@ mmf.df.1r <- function(mmf.seq, mmf.sched, mmf.npv, npv.selffunding, npv.breakeve
     all.sched <- c(all.sched, toString(sched))
   }
   
-  all.breakeven <- list()
-  for (breakeven in npv.breakeven) {
-    all.breakeven <- c(all.breakeven, toString(breakeven))
-  }
-  
   all.selffunding <- list()
   for (selffunding in npv.selffunding) {
     all.selffunding <- c(all.selffunding, toString(selffunding))
+  }
+  
+  all.breakeven <- list()
+  for (breakeven in npv.breakeven) {
+    all.breakeven <- c(all.breakeven, toString(breakeven))
   }
   
   df <- data.frame(sequence=unlist(all.seq), 
