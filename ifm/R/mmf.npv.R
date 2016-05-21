@@ -58,42 +58,44 @@
 #'
 
 mmf.npv <- mmf_npv <- 
-  function(cfs, durations, all.sequences, interest.rate) {
+  function(cfs, durations, all.sequences, interest.rate, begin.of.period = FALSE) {
     
   all.shedules <- schedules.1r(all.sequences, durations)
   
+  all.cfs.nominal <- list()
+  all.cfs.discounted <- list()
   all.npv <- list()
-  all.npv.sum <- list()
   
   for (count in 1:length(all.shedules)) {
     last.start <- tail(all.shedules[[count]],1)
-    current.schedule.npv <- list()
-    current.schedule.npv.sum <- 0
+    current.schedule.cfs <- list()
+    current.schedule.npv <- 0
     
     for (activity in 1:length(all.sequences[[count]])) {
       current.activity.id <- all.sequences[[count]][[activity]]
       current.activity.start <- all.shedules[[count]][[activity]]
-      #print(c("current.activity.id: ", current.activity.id ))
-      current.activity.cfs <- unlist(cfs[current.activity.id,], use.names=FALSE)
+      
+      current.unlist.cfs <- unlist(cfs[current.activity.id,], use.names=FALSE)
       
       current.activity.cfs <- (c(rep.int(0, current.activity.start - 1), 
-              current.activity.cfs[1:(length(current.activity.cfs) - (current.activity.start - 1))]))
-      #print(c("current.activity.start: ", current.activity.start))
-      #print(c("current.activity.cfs: ", current.activity.cfs ))
+                                 current.unlist.cfs[1:(length(current.unlist.cfs) - (current.activity.start - 1))]))
       
-      current.schedule.npv[[activity]] <- current.activity.cfs
-      # TODO: Retornar já a soma das colunas nominal e descontado.
+      current.schedule.cfs[[activity]] <- current.activity.cfs
       
-      current.activity.npv <- net.present.value(current.activity.cfs, interest.rate)
-      current.activity.npv.sum <- sum(current.activity.npv)
-      
-      current.schedule.npv.sum <- current.schedule.npv.sum + current.activity.npv.sum
-      #print(c("current.activity.npv.sum: ", current.activity.npv.sum))
-      #print("_________")
+      current.activity.npv <- net.present.value(current.activity.cfs, interest.rate, begin.of.period)
+      current.schedule.npv <- current.schedule.npv + current.activity.npv
     }
+    all.cfs.nominal[[count]] <- colSums(matrix(unlist(current.schedule.cfs),
+                                               ncol = length(current.schedule.cfs[[1]]),
+                                               byrow = T))
+    all.cfs.discounted[[count]] <- discounted.csf(all.cfs.nominal[[count]],
+                                                  interest.rate,
+                                                  begin.of.period)
     all.npv[[count]] <- current.schedule.npv
-    all.npv.sum[count] <- current.schedule.npv.sum
     
   }
-  return(list(all.shedules, all.npv, all.npv.sum))
-}
+  return(list(shedules=all.shedules, 
+              cfs.nominal=all.cfs.nominal, 
+              cfs.discounted=all.cfs.discounted, 
+              npv=all.npv))
+  }
