@@ -1,0 +1,130 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/transitional.dtd">
+<html><head><title>RUNIT TEST PROTOCOL--Sun May 22 11:35:45 2016</title>
+</head>
+<body><h1 TRUE>RUNIT TEST PROTOCOL--Sun May 22 11:35:45 2016</h1>
+<p>Number of test functions: 12</p>
+<p>Number of errors: 0</p>
+<p style=color:red>Number of failures: 6</p>
+<hr>
+<h3 TRUE>1 Test suite</h3>
+<table border="1" width="60%" >
+<tr><th width="30%">Name</th>
+<th width="30%">Test functions</th>
+<th width="20%">Errors</th>
+<th width="20%">Failures</th>
+</tr>
+<tr><td><a href="#imf">imf</a></td>
+<td>12</td>
+<td>0</td>
+<td bgcolor="red">6</td>
+</tr>
+</table>
+<hr>
+<h3 TRUE>Failures</h3>
+<table border="1" width="100%" >
+<tr><th width="30%">Test suite : test function</th>
+<th width="70%">message</th>
+</tr>
+<tr><td><a href="#imf_.__discount.rate.vector.test.R_test.discount.rate.vector.value_BegPeriodFalse">imf : test.discount.rate.vector.value_BegPeriodFalse</a></td>
+<td>Error in checkIdentical(drv[1], 1) : FALSE 
+ 
+</td>
+</tr>
+<tr><td><a href="#imf_.__discount.rate.vector.test.R_test.discount.rate.vector_BegPeriodTrue">imf : test.discount.rate.vector_BegPeriodTrue</a></td>
+<td>Error in checkIdentical(drv[1], 0.9090909) : FALSE 
+ 
+</td>
+</tr>
+<tr><td><a href="#imf_.__net.future.value.test.R_test.future.value_BegPeriodFalse">imf : test.future.value_BegPeriodFalse</a></td>
+<td>Error in checkIdentical(round(nfv[[1]], digits = 2), -3150) : FALSE 
+ 
+</td>
+</tr>
+<tr><td><a href="#imf_.__net.future.value.test.R_test.future.value_BegPeriodTrue">imf : test.future.value_BegPeriodTrue</a></td>
+<td>Error in checkIdentical(round(nfv[[1]], digits = 2), -3000) : FALSE 
+ 
+</td>
+</tr>
+<tr><td><a href="#imf_.__net.present.value.test.R_test.net.present.value_BegPeriodFalse">imf : test.net.present.value_BegPeriodFalse</a></td>
+<td>Error in checkIdentical(round(sum(npv), digits = 2), -826.45) : FALSE 
+ 
+</td>
+</tr>
+<tr><td><a href="#imf_.__net.present.value.test.R_test.net.present.value_BegPeriodTrue">imf : test.net.present.value_BegPeriodTrue</a></td>
+<td>Error in checkIdentical(round(sum(npv), digits = 4), -751.3148) : FALSE 
+ 
+</td>
+</tr>
+</table>
+<hr>
+<h3 TRUE>Details</h3>
+<p><a name="imf"><h5 TRUE>Test Suite: imf</h5>
+</a>Test function regexp: ^test.+<br/>Test file regexp: test.R<br/>Involved directory:<br/>./<br/><ul><li><a href=".//cpm.all.schedule.test.R">Test file: cpm.all.schedule.test.R</a><ul><li><a name="imf_.__cpm.all.schedule.test.R_test.cpm.all.schedule">test.cpm.all.schedule: (126 checks) ... OK (0 seconds)<br/></a></li></ul></li><li><a href=".//critical.path.method.test.R">Test file: critical.path.method.test.R</a><ul><li><a name="imf_.__critical.path.method.test.R_test.critical.path.method">test.critical.path.method: (60 checks) ... OK (0 seconds)<br/></a></li></ul></li><li><a href=".//discount.rate.vector.test.R">Test file: discount.rate.vector.test.R</a><ul><li><a name="imf_.__discount.rate.vector.test.R_test.discount.rate.vector.value_BegPeriodFalse"><u style=color:red>test.discount.rate.vector.value_BegPeriodFalse: FAILURE !! (check number 1)  </u></a>Error in checkIdentical(drv[1], 1) : FALSE 
+ 
+<br/></li><li><a name="imf_.__discount.rate.vector.test.R_test.discount.rate.vector_BegPeriodTrue"><u style=color:red>test.discount.rate.vector_BegPeriodTrue: FAILURE !! (check number 1)  </u></a>Error in checkIdentical(drv[1], 0.9090909) : FALSE 
+ 
+<br/></li></ul></li><li><a href=".//draw.cfs.test.R">Test file: draw.cfs.test.R</a><ul><li><a name="imf_.__draw.cfs.test.R_test.draw.cfs_filenamedefault">test.draw.cfs_filenamedefault: (0 checks) ... OK (0.06 seconds)<br/></a></li><li><a name="imf_.__draw.cfs.test.R_test.draw.cfs_passingfilename">test.draw.cfs_passingfilename: (0 checks) ... OK (0.04 seconds)<br/></a></li></ul></li><li><a href=".//draw.graph.test.R">Test file: draw.graph.test.R</a><ul><li><a name="imf_.__draw.graph.test.R_test.draw.graph_filenamedefault">test.draw.graph_filenamedefault: (0 checks) ... OK (0.02 seconds)<br/></a></li></ul></li><li><a href=".//mmf.all.sequences.test.R">Test file: mmf.all.sequences.test.R</a><ul><li><a name="imf_.__mmf.all.sequences.test.R_test.mmf.all.sequences">test.mmf.all.sequences: (270 checks) ... OK (0.03 seconds)<br/></a></li></ul></li><li><a href=".//net.future.value.test.R">Test file: net.future.value.test.R</a><ul><li><a name="imf_.__net.future.value.test.R_test.future.value_BegPeriodFalse"><u style=color:red>test.future.value_BegPeriodFalse: FAILURE !! (check number 1)  </u></a>Error in checkIdentical(round(nfv[[1]], digits = 2), -3150) : FALSE 
+ 
+<br/></li><li><a name="imf_.__net.future.value.test.R_test.future.value_BegPeriodTrue"><u style=color:red>test.future.value_BegPeriodTrue: FAILURE !! (check number 1)  </u></a>Error in checkIdentical(round(nfv[[1]], digits = 2), -3000) : FALSE 
+ 
+<br/></li></ul></li><li><a href=".//net.present.value.test.R">Test file: net.present.value.test.R</a><ul><li><a name="imf_.__net.present.value.test.R_test.net.present.value_BegPeriodFalse"><u style=color:red>test.net.present.value_BegPeriodFalse: FAILURE !! (check number 1)  </u></a>Error in checkIdentical(round(sum(npv), digits = 2), -826.45) : FALSE 
+ 
+<br/></li><li><a name="imf_.__net.present.value.test.R_test.net.present.value_BegPeriodTrue"><u style=color:red>test.net.present.value_BegPeriodTrue: FAILURE !! (check number 1)  </u></a>Error in checkIdentical(round(sum(npv), digits = 4), -751.3148) : FALSE 
+ 
+<br/></li></ul></li></ul><hr>
+<table border="0" width="80%" >
+<tr><th>Name</th>
+<th>Value</th>
+</tr>
+<tr><td>platform</td>
+<td>x86_64-apple-darwin13.4.0</td>
+</tr>
+<tr><td>arch</td>
+<td>x86_64</td>
+</tr>
+<tr><td>os</td>
+<td>darwin13.4.0</td>
+</tr>
+<tr><td>system</td>
+<td>x86_64, darwin13.4.0</td>
+</tr>
+<tr><td>status</td>
+<td></td>
+</tr>
+<tr><td>major</td>
+<td>3</td>
+</tr>
+<tr><td>minor</td>
+<td>2.3</td>
+</tr>
+<tr><td>year</td>
+<td>2015</td>
+</tr>
+<tr><td>month</td>
+<td>12</td>
+</tr>
+<tr><td>day</td>
+<td>10</td>
+</tr>
+<tr><td>svn rev</td>
+<td>69752</td>
+</tr>
+<tr><td>language</td>
+<td>R</td>
+</tr>
+<tr><td>version.string</td>
+<td>R version 3.2.3 (2015-12-10)</td>
+</tr>
+<tr><td>nickname</td>
+<td>Wooden Christmas-Tree</td>
+</tr>
+<tr><td>host</td>
+<td>MacBook-Air-de-Antoanne.local</td>
+</tr>
+<tr><td>compiler</td>
+<td>clang++</td>
+</tr>
+</table>
+</body>
+</html>

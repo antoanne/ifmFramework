@@ -26,11 +26,11 @@
 #' ex.cpm <- cpm(ex.cpm.activities.duration, 
 #'               ex.cpm.activities.successors)
 #'
-#' Now, that we have the CPM vector with:
-#' - est (Early Start Time)  - ex.cpm[[1]]
-#' - eft (Early Finish Time) - ex.cpm[[2]]
-#' - lst (Late Start Time)   - ex.cpm[[3]]
-#' - lft (Late Finish Time)  - ex.cpm[[4]]
+#' # Now, we have the CPM vector with:
+#' # - est (Early Start Time)  - ex.cpm[[1]]
+#' # - eft (Early Finish Time) - ex.cpm[[2]]
+#' # - lst (Late Start Time)   - ex.cpm[[3]]
+#' # - lft (Late Finish Time)  - ex.cpm[[4]]
 #'
 #' ex.cpm.activities.schedule <- 
 #'    cpm.all.schedule(ex.cpm[['est']], ex.cpm[['lst']] - ex.cpm[['est']])

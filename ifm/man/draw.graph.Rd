@@ -5,9 +5,6 @@
 \alias{drawGraph}
 \alias{draw_graph}
 \title{Draw the graph imported from the spreadsheet.}
-\usage{
-draw.graph(edges = c(1, 2, 1, 3, 2, 3))
-}
 \arguments{
 \item{edges}{- A vector defining the edges, the first edge points from the 
 first element to the second, the second edge from the third to the fourth, 

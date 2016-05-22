@@ -22,11 +22,10 @@
 #' @import igraph
 #' 
 #' @examples
-#'
+#' 
 #' ex.graph.image.path <- draw.graph(c(1,2, 1,3, 2,3, 3,4))
 #' 
-
-# require("igraph")
+require("igraph")
 
 draw.graph <- draw_graph <- drawGraph <-
   # initialize a vector if null
@@ -53,7 +52,7 @@ draw.graph <- draw_graph <- drawGraph <-
          edge.arrow.size=0.5)
     
     # turn off the dev mode
-    dev.off()
+    # dev.off()
     
     return (file.path)
   }

@@ -5,14 +5,18 @@
 \title{Generates a data frame with Sequence, Schedule, NPV, Breakeven and 
 Self Funding}
 \usage{
-mmf.df.1r(mmf.seq, mmf.sched, mmf.npv, npv.selffunding, npv.breakeven)
+mmf.df.1r(mmf.seq, mmf.sched, mmf.npv, mmf.npv.selffunding, mmf.npv.breakeven)
 }
 \arguments{
 \item{mmf.seq}{A list of sequences}
 
 \item{mmf.sched}{A list of schedules}
 
-\item{mmf.nvp}{A list of NPV values}
+\item{mmf.npv}{A list of NPV values}
+
+\item{mmf.npv.selffunding}{A list of Selffunding times}
+
+\item{mmf.npv.breakeven}{A list of Breakeven times}
 }
 \description{
 Generates a data frame with Sequence, Schedule, NPV, Breakeven and 
@@ -34,8 +38,13 @@ ex.mmf <- mmf.npv(ex.sheet.data.cfs,
                   ex.mmf.seq,
                   ex.sheet.data.interest.rate)
 
-ex.mmf.shedules <- ex.mmf[['shedules']]
+ex.mmf.schedules <- ex.mmf[['schedules']]
+ex.mmf.cfs.nominal <- ex.mmf[['cfs.nominal']]
+ex.mmf.cfs.discounted <- ex.mmf[['cfs.discounted']]
 ex.mmf.npv <- ex.mmf[['npv']]
+
+ex.mmf.npv.selffunding <- mmf.get.selffunding(ex.mmf.cfs.discounted)
+ex.mmf.npv.breakeven <- mmf.get.breakeven(ex.mmf.cfs.discounted)
 
 ex.mmf.df.1r <- mmf.df.1r(ex.mmf.seq,
                           ex.mmf.schedules,

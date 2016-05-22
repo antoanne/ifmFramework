@@ -16,6 +16,10 @@ mmf.npv(cfs, durations, all.sequences, interest.rate, begin.of.period = FALSE)
 
 \item{interest.rate}{A number that represents the nominal Interest Rate, 
 presented by year.}
+
+\item{begin.of.period}{A boolean that represents if the Tax Rate will be 
+applied at the begining of period. FALSE by default, represents that Tax Rate
+will be applied at second period .}
 }
 \value{
 A list with all shedules, all npv csf and sum of each npv.

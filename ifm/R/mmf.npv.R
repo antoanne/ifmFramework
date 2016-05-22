@@ -9,7 +9,10 @@
 #' @param all.sequences List of all possible MMF sequences.
 #' @param interest.rate A number that represents the nominal Interest Rate, 
 #' presented by year.
-#'  
+#' @param begin.of.period A boolean that represents if the Tax Rate will be 
+#' applied at the begining of period. FALSE by default, represents that Tax Rate
+#' will be applied at second period .
+#' 
 #' @return A list with all shedules, all npv csf and sum of each npv.
 #'  
 #' @export mmf.npv
@@ -60,20 +63,20 @@
 mmf.npv <- mmf_npv <- 
   function(cfs, durations, all.sequences, interest.rate, begin.of.period = FALSE) {
     
-  all.shedules <- schedules.1r(all.sequences, durations)
+  all.schedules <- schedules.1r(all.sequences, durations)
   
   all.cfs.nominal <- list()
   all.cfs.discounted <- list()
   all.npv <- list()
   
-  for (count in 1:length(all.shedules)) {
-    last.start <- tail(all.shedules[[count]],1)
+  for (count in 1:length(all.schedules)) {
+    last.start <- tail(all.schedules[[count]],1)
     current.schedule.cfs <- list()
     current.schedule.npv <- 0
     
     for (activity in 1:length(all.sequences[[count]])) {
       current.activity.id <- all.sequences[[count]][[activity]]
-      current.activity.start <- all.shedules[[count]][[activity]]
+      current.activity.start <- all.schedules[[count]][[activity]]
       
       current.unlist.cfs <- unlist(cfs[current.activity.id,], use.names=FALSE)
       
@@ -94,7 +97,7 @@ mmf.npv <- mmf_npv <-
     all.npv[[count]] <- current.schedule.npv
     
   }
-  return(list(shedules=all.shedules, 
+  return(list(schedules=all.schedules, 
               cfs.nominal=all.cfs.nominal, 
               cfs.discounted=all.cfs.discounted, 
               npv=all.npv))

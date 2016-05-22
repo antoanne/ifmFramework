@@ -11,7 +11,7 @@ mmf.max.npv(mmf.npv, mmf.seq, mmf.schedules)
 
 \item{mmf.seq}{Vector with the sequence of activities}
 
-\item{mmf.sched}{Vector with the collection of possible schedules}
+\item{mmf.schedules}{Vector with the collection of possible schedules}
 }
 \value{
 list with NPV, sequence and scheduleof the sequence with the maximum NPV

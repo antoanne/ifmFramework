@@ -3,7 +3,9 @@
 #' @name mmf.df.1r
 #' @param mmf.seq A list of sequences
 #' @param mmf.sched A list of schedules
-#' @param mmf.nvp A list of NPV values
+#' @param mmf.npv A list of NPV values
+#' @param mmf.npv.selffunding A list of Selffunding times
+#' @param mmf.npv.breakeven A list of Breakeven times
 #' @export
 #' @examples 
 #' 
@@ -21,8 +23,13 @@
 #'                   ex.mmf.seq,
 #'                   ex.sheet.data.interest.rate)
 #' 
-#' ex.mmf.shedules <- ex.mmf[['shedules']]
+#' ex.mmf.schedules <- ex.mmf[['schedules']]
+#' ex.mmf.cfs.nominal <- ex.mmf[['cfs.nominal']]
+#' ex.mmf.cfs.discounted <- ex.mmf[['cfs.discounted']]
 #' ex.mmf.npv <- ex.mmf[['npv']]
+#' 
+#' ex.mmf.npv.selffunding <- mmf.get.selffunding(ex.mmf.cfs.discounted)
+#' ex.mmf.npv.breakeven <- mmf.get.breakeven(ex.mmf.cfs.discounted)
 #' 
 #' ex.mmf.df.1r <- mmf.df.1r(ex.mmf.seq,
 #'                           ex.mmf.schedules,
@@ -30,7 +37,11 @@
 #'                           ex.mmf.npv.selffunding,
 #'                           ex.mmf.npv.breakeven)
 #'                           
-mmf.df.1r <- function(mmf.seq, mmf.sched, mmf.npv, npv.selffunding, npv.breakeven){
+mmf.df.1r <- function(mmf.seq, 
+                      mmf.sched, 
+                      mmf.npv, 
+                      mmf.npv.selffunding, 
+                      mmf.npv.breakeven){
   
   all.seq <- list()
   for (seq in mmf.seq) {
@@ -43,12 +54,12 @@ mmf.df.1r <- function(mmf.seq, mmf.sched, mmf.npv, npv.selffunding, npv.breakeve
   }
   
   all.selffunding <- list()
-  for (selffunding in npv.selffunding) {
+  for (selffunding in mmf.npv.selffunding) {
     all.selffunding <- c(all.selffunding, toString(selffunding))
   }
   
   all.breakeven <- list()
-  for (breakeven in npv.breakeven) {
+  for (breakeven in mmf.npv.breakeven) {
     all.breakeven <- c(all.breakeven, toString(breakeven))
   }
   
