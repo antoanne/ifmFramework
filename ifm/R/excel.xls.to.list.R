@@ -80,11 +80,11 @@ excel.xls.to.list <- excel_xls_to_list <- excelXlsToList <-
                                                 header = FALSE))
 
     # list of variables to be used in maxNPV
-    variables.list <- list(data.frame.interest.rate[[1]], 
-                           data.frame.activities[[1]], 
-                           data.frame.durations[[1]],
-                           data.frame.predecessors, 
-                           data.frame.cash.flow.series)
+    variables.list <- list(interest.rate = data.frame.interest.rate[[1]], 
+                           activities = data.frame.activities[[1]], 
+                           durations = data.frame.durations[[1]],
+                           predecessors = data.frame.predecessors, 
+                           cash.flow.series = data.frame.cash.flow.series)
     
     return (variables.list)
   }

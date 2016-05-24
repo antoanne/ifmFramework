@@ -52,7 +52,7 @@ draw.graph <- draw_graph <- drawGraph <-
          edge.arrow.size=0.5)
     
     # turn off the dev mode
-    # dev.off()
+    dev.off()
     
     return (file.path)
   }
