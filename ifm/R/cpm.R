@@ -34,23 +34,8 @@ cpm <- critical.path.method <- critical_path_method <-
            activities.successors = list(c(2,3), 4, c(4,5), 6, 7, 7, c(0)))
     {
   
-      #generates predecessors vector from sucessors
-      activities.predecessors <- rep(list(0), length(activities.successors))
-      current.position <- 1
-      for (node in activities.successors) {
-        #print(c(">>>", current.position))
-        for(n in node) {
-          if(n != 0) {
-            if(activities.predecessors[[n]][1] == 0) {
-              activities.predecessors[[n]] <- c(current.position)
-            } else {
-              activities.predecessors[[n]] <- c(activities.predecessors[[n]], c(current.position))
-            }
-          }
-        }
-        current.position <- current.position + 1
-      }
-  
+      activities.predecessors <- utils.suc2pred(activities.successors)
+      
       activities.quantity <- length(activities.duration)
       #generates early and late start times of for a cpm network
       est<-vector (mode="numeric", length=activities.quantity)
