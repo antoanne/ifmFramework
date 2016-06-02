@@ -80,8 +80,12 @@ mmf.npv <- mmf_npv <-
       
       current.unlist.cfs <- unlist(cfs[current.activity.id,], use.names=FALSE)
       
-      current.activity.cfs <- (c(rep.int(0, current.activity.start - 1), 
-                                 current.unlist.cfs[1:(length(current.unlist.cfs) - (current.activity.start - 1))]))
+      if(current.activity.start != 0) {
+        current.activity.cfs <- (c(rep.int(0, current.activity.start - 1), 
+                                   current.unlist.cfs[1:(length(current.unlist.cfs) - (current.activity.start - 1))]))
+      } else {
+        current.activity.cfs <- c(current.unlist.cfs[1:(length(current.unlist.cfs) - (current.activity.start - 1))])
+      }
       
       current.schedule.cfs[[activity]] <- current.activity.cfs
       
