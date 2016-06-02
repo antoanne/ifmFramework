@@ -23,4 +23,4 @@ draw.mmf.sf.be <- function(df.complete) {
          cex = 0.8, fill = my.colors, density = c(20,100))
 }
 
-draw.mmf.sf.be(ex.mmf.df.1r)
+# draw.mmf.sf.be(ex.mmf.df.1r)

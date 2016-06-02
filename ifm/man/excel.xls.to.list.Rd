@@ -17,8 +17,9 @@ List of variables to be used on the maxNPV function.
 This function is responsible for reading a spreadsheet 
 representing the project, and return a list with the following information
 (in this order): The interest rate, the list of activities, the list of 
-durations of activities, the list of predecessors of activities and the 
-matrix that represents the cash flow series
+durations of activities, the list of predecessors of activities, the 
+matrix that represents the cash flow series and the graph edges based on the 
+predecessor list
 }
 \examples{
 
@@ -26,7 +27,8 @@ ex.sheet.data <- excel.xls.to.list("../resources/spreadsheet.xls")
 
 }
 \seealso{
-Other utility: \code{\link{excel.list.to.xls}}
+Other utility: \code{\link{excel.list.to.xls}},
+  \code{\link{predecessors.to.edges}}
 }
 \keyword{excel}
 \keyword{maxNPV}
