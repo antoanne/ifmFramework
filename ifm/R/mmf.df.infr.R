@@ -1,0 +1,48 @@
+#' Generates a data frame with Schedule, NPV, Breakeven and Self Funding
+#' @name mmf.df.infr
+#' @param mmf.sched A list of schedules
+#' @param mmf.npv A list of NPV values
+#' @param mmf.npv.selffunding A list of Selffunding times
+#' @param mmf.npv.breakeven A list of Breakeven times
+#' @export
+#' @examples 
+#' 
+#' ex.sheet.data <- excel.xls.to.list("resources/spreadsheet.xls")
+#' ex.sheet.data.interest.rate <- ex.sheet.data[[1]]
+#' ex.sheet.data.activities <- ex.sheet.data[[2]]
+#' ex.sheet.data.durations <- ex.sheet.data[[3]]
+#' ex.sheet.data.predecessors <- ex.sheet.data[[4]]
+#' ex.sheet.data.cfs <- ex.sheet.data[[5]]
+#' 
+#' ex.mmf.df.infr <- mmf.df.infr(ex.cpm.schedules,
+#'                           ex.cpm.npv,
+#'                           ex.cpm.npv.selffunding,
+#'                           ex.cpm.npv.breakeven)
+#'                           
+mmf.df.infr <- function(mmf.sched, 
+                        mmf.npv, 
+                        mmf.npv.selffunding, 
+                        mmf.npv.breakeven){
+  
+  all.sched <- list()
+  for (sched in mmf.sched) {
+    all.sched <- c(all.sched, toString(sched))
+  }
+  
+  all.selffunding <- list()
+  for (selffunding in mmf.npv.selffunding) {
+    all.selffunding <- c(all.selffunding, toString(selffunding))
+  }
+  
+  all.breakeven <- list()
+  for (breakeven in mmf.npv.breakeven) {
+    all.breakeven <- c(all.breakeven, toString(breakeven))
+  }
+  
+  df <- data.frame(schedule=unlist(all.sched), 
+                   npv=unlist(mmf.npv),
+                   selffunding=unlist(all.selffunding),
+                   breakeven=unlist(all.breakeven))
+  
+  return(df)
+}
