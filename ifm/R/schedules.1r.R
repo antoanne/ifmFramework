@@ -9,8 +9,8 @@ schedules.1r <- function(sequences, durations) {
     total.time <- 0
     current.schedule <- c()
     for (t in durations[seq]) {
-      total.time <- total.time + t
       current.schedule <- c(current.schedule, c(total.time))
+      total.time <- total.time + t
     }
     schedules <- c(schedules, list(current.schedule))
   }
