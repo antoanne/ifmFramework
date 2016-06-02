@@ -65,6 +65,7 @@ mmf.npv <- mmf_npv <-
     
   all.schedules <- schedules.1r(all.sequences, durations)
   
+  all.cfs.stream <- list()
   all.cfs.nominal <- list()
   all.cfs.discounted <- list()
   all.npv <- list()
@@ -80,18 +81,16 @@ mmf.npv <- mmf_npv <-
       
       current.unlist.cfs <- unlist(cfs[current.activity.id,], use.names=FALSE)
       
-      if(current.activity.start != 0) {
-        current.activity.cfs <- (c(rep.int(0, current.activity.start - 1), 
-                                   current.unlist.cfs[1:(length(current.unlist.cfs) - (current.activity.start - 1))]))
-      } else {
-        current.activity.cfs <- c(current.unlist.cfs[1:(length(current.unlist.cfs) - (current.activity.start - 1))])
-      }
+      current.activity.cfs <- (c(rep.int(0, current.activity.start), 
+                                 current.unlist.cfs[1:(length(current.unlist.cfs) - (current.activity.start))]))
       
       current.schedule.cfs[[activity]] <- current.activity.cfs
       
       current.activity.npv <- net.present.value(current.activity.cfs, interest.rate, begin.of.period)
       current.schedule.npv <- current.schedule.npv + current.activity.npv
     }
+    all.cfs.stream[[count]] <- current.schedule.cfs
+    
     all.cfs.nominal[[count]] <- colSums(matrix(unlist(current.schedule.cfs),
                                                ncol = length(current.schedule.cfs[[1]]),
                                                byrow = T))
@@ -102,7 +101,14 @@ mmf.npv <- mmf_npv <-
     
   }
   return(list(schedules=all.schedules, 
+              cfs.stream=all.cfs.stream,
               cfs.nominal=all.cfs.nominal, 
               cfs.discounted=all.cfs.discounted, 
               npv=all.npv))
   }
+
+
+# ex.mmf <- mmf.npv(ex.sheet.data.cfs,
+#                   ex.sheet.data.durations,
+#                   ex.mmf.seq,
+#                   ex.sheet.data.interest.rate)
