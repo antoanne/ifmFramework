@@ -1,6 +1,9 @@
 draw.mmf.sf.be <- function(df.complete) {
+  #ordenar o dataframe
+  df.complete <- df.complete[with(df.complete, order(c(npv), decreasing=TRUE)), ]
+  
   # separa os dados que quero usar a partir do dataframe completo
-  df <- subset(df.complete, select = selffunding:breakeven)
+  df <- subset(df.complete[1:min(nrow(df.complete),10),], select = selffunding:breakeven)
   
   # cria nova coluna com o valor da diferença entre be e sf, para mostrar 
   #corretamente no barplot
@@ -22,5 +25,3 @@ draw.mmf.sf.be <- function(df.complete) {
   legend("topright", c('Selffunding','Breakeven'), 
          cex = 0.8, fill = my.colors, density = c(20,100))
 }
-
-# draw.mmf.sf.be(ex.mmf.df.1r)

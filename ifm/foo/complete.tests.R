@@ -20,6 +20,7 @@ source("ifm/R/cpm.npv.R")
 source("ifm/R/cpm.all.schedule.R")
 source("ifm/R/draw.cfs.R")
 source("ifm/R/draw.mmf.npv.R")
+source("ifm/R/draw.mmf.sf.be.R")
 source("ifm/R/draw.discounted.cash.R")
 
 # busca os dados da planilha
@@ -74,6 +75,8 @@ draw.cfs(unlist(ex.mmf.cfs.nominal[ex.mmf.npv.max.id[[1]]]))
 # desenha o fluxo de caixa acumulado como o exemplo do Denee.
 draw.discounted.cash(unlist(ex.mmf.cfs.discounted[ex.mmf.npv.max.id[[1]]]))
 
+# plotar SF x BE
+draw.mmf.sf.be(ex.mmf.df.1r)
 
 #######################################
 ### EXEMPLO PARA inf RECURSOS = CPM ###
@@ -110,7 +113,8 @@ ex.cpm.df.infr <- mmf.df.infr(ex.cpm.schedules,
 # plota o NPV x Sequência, ordenado por NPV
 draw.mmf.npv(ex.cpm.df.infr["npv"])
 
-
+# plotar SF x BE
+draw.mmf.sf.be(ex.cpm.df.infr)
 
 # # TODO: Change mmf.max.npv to extract info from dataframe
 # ex.mmf.npv.max <- mmf.max.npv(ex.mmf.npv, ex.mmf.seq, ex.mmf.schedules)
