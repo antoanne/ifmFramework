@@ -27,8 +27,9 @@
 mmf.get.breakeven <- function(mmf.cfs) {
   all.breakeven <- list()
   for (count in 1:length(mmf.cfs)) {
-    mmf.cfs[[count]][which(mmf.cfs[[count]] < 0)] = 0
-    all.breakeven[[count]] <- min(which(mmf.cfs[[count]] > 0))
+    current.cfs <- cumsum(unlist(mmf.cfs[[count]]))
+    current.cfs[which(current.cfs < 0)] = 0
+    all.breakeven[[count]] <- min(which(current.cfs > 0))
   }
   return(all.breakeven)
 }
