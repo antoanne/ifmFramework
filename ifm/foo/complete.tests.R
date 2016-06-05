@@ -19,6 +19,7 @@ source("ifm/R/cpm.R")
 source("ifm/R/cpm.npv.R")
 source("ifm/R/cpm.all.schedule.R")
 source("ifm/R/draw.cfs.R")
+source("ifm/R/draw.graph.R")
 source("ifm/R/draw.mmf.npv.R")
 source("ifm/R/draw.mmf.sf.be.R")
 source("ifm/R/draw.discounted.cash.R")
@@ -30,6 +31,17 @@ ex.sheet.data <- excel.xls.to.list("resources/spreadsheet.xls")
   ex.sheet.data.durations <- ex.sheet.data[[3]]
   ex.sheet.data.predecessors <- ex.sheet.data[[4]]
   ex.sheet.data.cfs <- ex.sheet.data[[5]]
+
+##########################################
+## PLOTAR GRAFO
+edges <- utils.pred2graph(ex.sheet.data.predecessors)
+g <- make_graph(edges, directed = TRUE )
+plot(g)
+# ex.graph.image.path <- draw.graph(edges)
+# print(ex.graph.image.path)
+
+# plotar 4 figuras por página, daqui para frente.
+par(mfrow=c(2,2))
 
 ##########################################
 ## EXEMPLO PARA 1 RECURSO = allTopSort ###
@@ -69,6 +81,8 @@ ex.mmf.npv.max.sequence <- ex.mmf.npv.max['sequence']
 ex.mmf.npv.max.schedule <- ex.mmf.npv.max['schedule']
 ex.mmf.npv.max.value <- ex.mmf.npv.max['value']
 
+
+
 # desenha o fluxo de caixa da sequência com melhor NPV
 draw.cfs(unlist(ex.mmf.cfs.nominal[ex.mmf.npv.max.id[[1]]]))
 
@@ -77,6 +91,9 @@ draw.discounted.cash(unlist(ex.mmf.cfs.discounted[ex.mmf.npv.max.id[[1]]]))
 
 # plotar SF x BE
 draw.mmf.sf.be(ex.mmf.df.1r)
+
+# Salvar no excel
+#ex.file.path <- excel.list.to.xls(ex.mmf.df.1r)
 
 #######################################
 ### EXEMPLO PARA inf RECURSOS = CPM ###

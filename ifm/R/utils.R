@@ -35,3 +35,17 @@ utils.pred2suc <- function(activities.predecessors) {
   }
   return(activities.successors)
 }
+
+utils.pred2graph <- function(activities.predecessors) {
+  edges <- c()
+  activity.index <- 1
+  for (predecessors in ex.sheet.data$predecessors) {
+    for (item in predecessors) {
+      if(strtoi(item) != 0){
+        edges <- c(edges, strtoi(item), activity.index);
+      }
+    }
+    activity.index <- activity.index + 1;  
+  }
+  return(edges)
+}
