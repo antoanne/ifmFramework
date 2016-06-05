@@ -25,10 +25,10 @@ mmf.df.infr <- function(mmf.sched,
                         mmf.npv.breakeven){
   
   all.sched <- list()
-  for (sched in mmf.sched) {
-    all.sched <- c(all.sched, toString(sched))
+  for(i in 1:nrow(mmf.sched)) {
+    all.sched <- c(all.sched, toString(mmf.sched[i,]))
   }
-  
+
   all.selffunding <- list()
   for (selffunding in mmf.npv.selffunding) {
     all.selffunding <- c(all.selffunding, toString(selffunding))
