@@ -87,7 +87,7 @@ ex.mmf.npv.max.value <- ex.mmf.npv.max['value']
 draw.cfs(unlist(ex.mmf.cfs.nominal[ex.mmf.npv.max.id[[1]]]))
 
 # desenha o fluxo de caixa acumulado como o exemplo do Denee.
-draw.discounted.cash(unlist(ex.mmf.cfs.discounted[ex.mmf.npv.max.id[[1]]]))
+draw.discounted.cash(unlist(ex.mmf.cfs.discounted[ex.mmf.npv.max.id[[1]]]), 30)
 
 # plotar SF x BE
 draw.mmf.sf.be(ex.mmf.df.1r)
@@ -127,15 +127,25 @@ ex.cpm.df.infr <- mmf.df.infr(ex.cpm.schedules,
                               ex.cpm.npv.selffunding,
                               ex.cpm.npv.breakeven)
 
+# busca o max NPV - TODO: Melhorar!
+ex.cpm.schedules.list <- list()
+for(i in 1:nrow(ex.cpm.schedules)) {
+  ex.cpm.schedules.list <- c(ex.cpm.schedules.list, toString(ex.cpm.schedules[i,]))
+}
+
+ex.cpm.npv.max <- mmf.max.npv(ex.cpm.npv, NULL, ex.cpm.schedules.list)
+ex.cpm.npv.max.id <- ex.cpm.npv.max['id']
+ex.cpm.npv.max.schedule <- ex.cpm.npv.max['schedule']
+ex.cpm.npv.max.value <- ex.cpm.npv.max['value']
+
 # plota o NPV x Sequência, ordenado por NPV
 draw.mmf.npv(ex.cpm.df.infr["npv"])
 
+# desenha o fluxo de caixa da sequência com melhor NPV
+draw.cfs(unlist(ex.cpm.cfs.nominal[ex.cpm.npv.max.id[[1]]]))
+
+# desenha o fluxo de caixa acumulado como o exemplo do Denee.
+draw.discounted.cash(unlist(ex.cpm.cfs.discounted[ex.cpm.npv.max.id[[1]]]), 30)
+
 # plotar SF x BE
 draw.mmf.sf.be(ex.cpm.df.infr)
-
-# # TODO: Change mmf.max.npv to extract info from dataframe
-# ex.mmf.npv.max <- mmf.max.npv(ex.mmf.npv, ex.mmf.seq, ex.mmf.schedules)
-# ex.mmf.npv.max.id <- ex.mmf.npv.max['id']
-# ex.mmf.npv.max.sequence <- ex.mmf.npv.max['sequence']
-# ex.mmf.npv.max.schedule <- ex.mmf.npv.max['schedule']
-# ex.mmf.npv.max.value <- ex.mmf.npv.max['value']
