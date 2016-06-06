@@ -14,9 +14,14 @@
 #' 
 draw.discounted.cash <- draw_discounted_cash <-
   function(discounted.cash, smooth = 1, title = "Discounted Cash vs Time") {
+    
+    png("output/draw.discounted.cash.png");
+    
     plot(spline(c(0, discounted.cash), n = smooth*length(c(0, discounted.cash))), 
          type="l", pch=20, xaxt='n',
          xlab="Time", ylab="Discounted Cash")
     title(title)
     abline(h=1)
+    
+    dev.off()
   }

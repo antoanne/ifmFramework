@@ -30,6 +30,8 @@ fooQqCoisa <- function () {
   
   ex.mmf.df.1r
   
-  # ex.file.path <- excel.list.to.xls(ex.mmf.df.1r)
+  lista <- list(ex.mmf.df.1r, image.path.vector)
+  
+  ex.file.path <- excel.list.to.xls(lista)
   
 }

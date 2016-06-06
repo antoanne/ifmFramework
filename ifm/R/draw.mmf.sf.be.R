@@ -1,4 +1,7 @@
 draw.mmf.sf.be <- function(df.complete) {
+  
+  png("output/draw.mmf.sf.be.png");
+  
   #ordenar o dataframe
   df.complete <- df.complete[with(df.complete, order(c(npv), decreasing=TRUE)), ]
   
@@ -24,4 +27,6 @@ draw.mmf.sf.be <- function(df.complete) {
   
   legend("topright", c('Selffunding','Breakeven'), 
          cex = 0.8, fill = my.colors, density = c(20,100))
+  
+  dev.off()
 }
