@@ -29,7 +29,7 @@
 #' ex.mmf.cfs.discounted <- ex.mmf[['cfs.discounted']]
 #' ex.mmf.npv <- ex.mmf[['npv']]
 #' 
-mmf.max.npv <- function(mmf.npv, mmf.seq, mmf.schedules) {
+mmf.max.npv <- function(mmf.npv, mmf.seq = list(), mmf.schedules = list()) {
   npv.max <- which.max(mmf.npv) # Identify position of MAX NPV
   npv.max.value <- mmf.npv[[npv.max]] # Get value of MAX NPV
   npv.max.sequence <- mmf.seq[npv.max] # Get sequence with max NPV
