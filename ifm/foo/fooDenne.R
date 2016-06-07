@@ -2,6 +2,7 @@
 # só deve ser executado se o pacote não for instalado na máquina.
 source("ifm/R/utils.R")
 source("ifm/R/excel.xls.to.list.R")
+source("ifm/R/excel.list.to.xls.R")
 source("ifm/R/net.present.value.R")
 source("ifm/R/net.future.value.R")
 source("ifm/R/discount.rate.vector.R")
