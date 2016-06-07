@@ -28,7 +28,7 @@ source("ifm/R/draw.discounted.cash.R")
 fooDenne <- function() {
   
   # busca os dados da planilha
-  ex.sheet.data <- excel.xls.to.list("resources/spreadsheet.xls")
+  ex.sheet.data <- excel.xls.to.list("resources/spreadsheet-cfs-4.xls")
   ex.sheet.data.interest.rate <- ex.sheet.data$interest.rate
   ex.sheet.data.activities <- ex.sheet.data$activities
   ex.sheet.data.durations <- ex.sheet.data$durations
