@@ -27,6 +27,7 @@ ex.edges <- predecessors.to.edges(ex.sheet.data$predecessors)
 }
 \seealso{
 Other utility: 
+\code{\link{excel.list.to.xls}()},
 \code{\link{excel.xls.to.list}()},
 \code{\link{utils.pred2graph}()},
 \code{\link{utils.pred2suc}()},

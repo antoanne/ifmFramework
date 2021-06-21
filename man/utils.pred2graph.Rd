@@ -24,6 +24,7 @@ plot(g)
 }
 \seealso{
 Other utility: 
+\code{\link{excel.list.to.xls}()},
 \code{\link{excel.xls.to.list}()},
 \code{\link{predecessors.to.edges}()},
 \code{\link{utils.pred2suc}()},

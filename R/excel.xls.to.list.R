@@ -27,7 +27,6 @@
 #'
 #' @examples
 #'
-#' print(getwd())
 #' ex.sheet.data <- excel.xls.to.list("../ifm/demo/resources/spreadsheet.xls")
 #'
 #'

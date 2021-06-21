@@ -26,13 +26,13 @@ predecessor list
 }
 \examples{
 
-print(getwd())
 ex.sheet.data <- excel.xls.to.list("../ifm/demo/resources/spreadsheet.xls")
 
 
 }
 \seealso{
 Other utility: 
+\code{\link{excel.list.to.xls}()},
 \code{\link{predecessors.to.edges}()},
 \code{\link{utils.pred2graph}()},
 \code{\link{utils.pred2suc}()},
