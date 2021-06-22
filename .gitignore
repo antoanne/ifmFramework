@@ -8,4 +8,4 @@ ifm.Rcheck/*
 
 *.Rproj
 
-lixo/*
+demo/output

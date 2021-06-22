@@ -1,0 +1,27 @@
+Package: ifm
+Type: Package
+Title: Financial evaluation of Projects
+Version: 0.1.0
+Author: Antoanne Christopher Pontes Wanderley
+Authors@R: c(
+    person("Antoanne", "Pontes", email = "antoanne@ufrj.br", role = c("aut", "ctb", "cre")),
+    person("Eber", "Schmitz", email = "eber@nce.ufrj.br", role = c("ctb")),
+    person("Alexandre", "Costa", email = "afcosta@br.ibm.com", role = "ctb"),
+    person("Anderson", "Nepomuceno", email = "anepomuceno@gmail.com", role = "ctb"),
+    person("Andre", "Gheventer", email = "gheventer@hotmail.com", role = "ctb"),
+    person("Cristianna", "De Ferran", email = "cristiannadeferran@yahoo.com.br", role = "ctb"),
+    person("Eduardo", "Chiote", email = "eduardochiote@gmail.com", role = "ctb"),
+    person("Marcelo", "Tueiv", email = "mtueiv@gmail.com", role = "ctb"),
+    person("Washington", "Correia", email = "washcpc@terra.com.br", role = "ctb")
+    )
+Maintainer: Antoanne Pontes <antoanne@ufrj.br>
+Description: R packeage with a set of functions for financial evaluation of
+    Software Project.
+License: LGPL (>= 2.1)
+Encoding: UTF-8
+URL: https://github.com/antoanne/ifmFramework
+BugReports: https://github.com/antoanne/ifmFramework/issues
+NeedsCompilation: no
+RoxygenNote: 7.1.1
+Imports: igraph, XLConnect, openxlsx, RUnit
+Date: 2018-07-31
