@@ -1,5 +1,6 @@
 library(ifm)
 library(igraph)
+library(XLConnect)
 
 ex.sheet.data <- excel.xls.to.list('demo/resources/spreadsheet.xls')
 ex.sheet.data.interest.rate <- ex.sheet.data[[1]]
