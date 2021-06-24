@@ -21,7 +21,7 @@ plotted by the draw.graph function.
 }
 \examples{
 
-ex.sheet.data <- excel.xls.to.list("../ifm/demo/resources/spreadsheet.xls")
+data("ex.sheet.data")
 ex.edges <- predecessors.to.edges(ex.sheet.data$predecessors)
 
 }

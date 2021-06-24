@@ -25,11 +25,9 @@
 #'
 #' @import XLConnect
 #'
-#' @examples
-#'
-#' ex.sheet.data <- excel.xls.to.list("../ifm/demo/resources/spreadsheet.xls")
-#'
-#'
+
+# ex.sheet.data <- excel.xls.to.list("../ifm/demo/resources/spreadsheet.xls")
+
 excel.xls.to.list <- excel_xls_to_list <- excelXlsToList <-
   function(xls.spreadsheet.path){
 

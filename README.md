@@ -5,10 +5,23 @@ This is part of the research project that aims to understand how we can enhance 
 
 To use this package please do the following steps:
 
-1 - install / download (git clone) R ifm package;
+Install on R
 
-2 - fill the spreadsheet and validate the named ranges: interestrate, activities, etc...
+Use this command: devtools::install_github("antoanne/ifmFramework", INSTALL_opts=c("--no-multiarch"))
 
-3 - put the spreadsheet on the /resources directory;
 
-4 - run the function xpto.
+Execute sample following this steps
+
+1. Import IFM package
+library(ifm)
+
+2. Load demo
+demo(sampledenne)
+
+
+
+
+
+
+References
+Denne, M., & Cleland-Huang, J. (2003). Software by numbers: Low-risk, high-return development. Prentice Hall Professional.

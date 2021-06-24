@@ -17,7 +17,7 @@ This function plot activities.predecessors to graph.
 }
 \examples{
 
-ex.sheet.data <- excel.xls.to.list("../ifm/demo/resources/spreadsheet.xls")
+data("ex.sheet.data")
 g <- utils.pred2graph(ex.sheet.data$predecessors)
 plot(g)
 

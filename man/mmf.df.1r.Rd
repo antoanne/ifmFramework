@@ -24,7 +24,7 @@ Self Funding
 }
 \examples{
 
-ex.sheet.data <- excel.xls.to.list("../ifm/demo/resources/spreadsheet.xls")
+data("ex.sheet.data")
 ex.sheet.data.interest.rate <- ex.sheet.data[[1]]
 ex.sheet.data.activities <- ex.sheet.data[[2]]
 ex.sheet.data.durations <- ex.sheet.data[[3]]

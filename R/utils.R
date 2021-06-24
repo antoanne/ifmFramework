@@ -17,7 +17,7 @@
 #'
 #' @examples
 #'
-#' ex.sheet.data <- excel.xls.to.list("../ifm/demo/resources/spreadsheet.xls")
+#' data("ex.sheet.data")
 #' act.pred <- utils.suc2pred(ex.sheet.data$predecessors)
 #'
 utils.suc2pred <- function(activities.successors) {
@@ -58,7 +58,7 @@ utils.suc2pred <- function(activities.successors) {
 #'
 #' @examples
 #'
-#' ex.sheet.data <- excel.xls.to.list("../ifm/demo/resources/spreadsheet.xls")
+#' data("ex.sheet.data")
 #' act.suc <- utils.pred2suc(ex.sheet.data$predecessors)
 #'
 utils.pred2suc <- function(activities.predecessors) {
@@ -100,7 +100,7 @@ utils.pred2suc <- function(activities.predecessors) {
 #'
 #' @examples
 #'
-#' ex.sheet.data <- excel.xls.to.list("../ifm/demo/resources/spreadsheet.xls")
+#' data("ex.sheet.data")
 #' g <- utils.pred2graph(ex.sheet.data$predecessors)
 #' plot(g)
 #'

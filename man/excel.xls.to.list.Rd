@@ -24,12 +24,6 @@ durations of activities, the list of predecessors of activities, the
 matrix that represents the cash flow series and the graph edges based on the
 predecessor list
 }
-\examples{
-
-ex.sheet.data <- excel.xls.to.list("../ifm/demo/resources/spreadsheet.xls")
-
-
-}
 \seealso{
 Other utility: 
 \code{\link{excel.list.to.xls}()},

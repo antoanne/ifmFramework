@@ -20,7 +20,7 @@
 #'
 #' @examples
 #'
-#' ex.sheet.data <- excel.xls.to.list("../ifm/demo/resources/spreadsheet.xls")
+#' data("ex.sheet.data")
 #' ex.edges <- predecessors.to.edges(ex.sheet.data$predecessors)
 #'
 predecessors.to.edges <- predecessors_to_edges <- predecessorsToEdges <-

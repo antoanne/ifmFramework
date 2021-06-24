@@ -1,10 +1,13 @@
 Package: ifm
 Type: Package
 Title: Financial evaluation of Projects
-Version: 0.1.0
+Version: 0.2.0
 Author: Antoanne Christopher Pontes Wanderley
 Authors@R: c(
     person("Antoanne", "Pontes", email = "antoanne@ufrj.br", role = c("aut", "ctb", "cre")),
+    person("Elton", "Marinho", email = "elton.marinho@ppgi.ufrj.br", role = c("ctb")),
+    person("Monica", "Silva", email = "monica.silva@ppgi.ufrj.br", role = c("ctb")),
+    person("Sergio", "Serra", email = "serra@ppgi.ufrj.br", role = c("ctb")),
     person("Eber", "Schmitz", email = "eber@nce.ufrj.br", role = c("ctb")),
     person("Alexandre", "Costa", email = "afcosta@br.ibm.com", role = "ctb"),
     person("Anderson", "Nepomuceno", email = "anepomuceno@gmail.com", role = "ctb"),
@@ -25,3 +28,5 @@ NeedsCompilation: no
 RoxygenNote: 7.1.1
 Imports: igraph, XLConnect, openxlsx, RUnit
 Date: 2018-07-31
+Depends: R (>= 2.10)
+LazyData: true

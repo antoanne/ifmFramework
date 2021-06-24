@@ -18,7 +18,7 @@ activities.predecessors.
 }
 \examples{
 
-ex.sheet.data <- excel.xls.to.list("../ifm/demo/resources/spreadsheet.xls")
+data("ex.sheet.data")
 act.pred <- utils.suc2pred(ex.sheet.data$predecessors)
 
 }
