@@ -71,7 +71,7 @@ excel.list.to.xls <- excel_list_to_xls <- excelListToXls<-
     date.time <- format(Sys.time(), "%Y-%m-%d-%H-%M-%S")
 
     # define a file path to save the spreadsheet
-    file.path <- paste("../ifm/demo/output/ifm-result-", date.time, ".xls", sep = "")
+    file.path <- paste("~/ifm-result-", date.time, ".xls", sep = "")
 
     print(file.path)
 
