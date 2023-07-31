@@ -19,6 +19,7 @@ library(ifm)
 demo(sampledenne)
 
 
+For more details please contact-us on antoanne@ufrj.br.
 
 
 
